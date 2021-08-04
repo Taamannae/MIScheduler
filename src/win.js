@@ -1,6 +1,4 @@
-export default
-
-[
+export const COURSES = [
     {
         "course": "BKS1002H",
         "title": "Book History in Practice",
