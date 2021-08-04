@@ -1,6 +1,5 @@
-import logo from './logo.svg';
 import './App.css';
-import React, { useState } from 'react';
+import React from 'react';
 import FullCalendar from '@fullcalendar/react';
 import dayGridPlugin from '@fullcalendar/daygrid';
 import timeGridPlugin from '@fullcalendar/timegrid';
@@ -103,7 +102,6 @@ export default class Fall extends React.Component {
 
       } else {
         if (startTime && (time === '9' || time === '10' || time === '11' || time === '12')) {
-          console.log("is AM");
           fullTime = time + ":00"
           if (time === '9') {
             fullTime = '0' + time + ":00"
@@ -126,7 +124,6 @@ export default class Fall extends React.Component {
   }
 
   addTime = (time) => {
-    let self = this;
     var newSched = _.cloneDeep(this.state.schedule);
 
     let find = _.find(newSched, function (o) {
@@ -212,8 +209,8 @@ export default class Fall extends React.Component {
               <p>{x.subtitle}</p>
               </div>
             <div className="info">
-              <h4><img src='/user.svg' />{x.instructor}</h4>
-              <h4><img src='/monitor.svg' /> {x.method}</h4>
+              <h4><img src='/user.svg' alt="instructor"/>{x.instructor}</h4>
+              <h4><img src='/monitor.svg' alt="method"/> {x.method}</h4>
             </div>
             </div>
         )
@@ -254,8 +251,8 @@ export default class Fall extends React.Component {
                 <h3>{x.day} {x.time}</h3>
               </div>
               <div className="info">
-                <h4><img src='/user.svg' />{x.instructor}</h4>
-                <h4><img src='/monitor.svg' /> {x.method}</h4>
+                <h4><img src='/user.svg' alt="instructor"/>{x.instructor}</h4>
+                <h4><img src='/monitor.svg' alt="method"/> {x.method}</h4>
               </div>
             </div>
           )
@@ -294,8 +291,8 @@ export default class Fall extends React.Component {
                 <h3>{x.day} {x.time}</h3>
               </div>
               <div className="info">
-                <h4><img src='/user.svg' />{x.instructor}</h4>
-                <h4><img src='/monitor.svg' /> {x.method}</h4>
+                <h4><img src='/user.svg' alt="instructor"/>{x.instructor}</h4>
+                <h4><img src='/monitor.svg' alt="method"/> {x.method}</h4>
               </div>
             </div>
           )
