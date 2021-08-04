@@ -1,0 +1,120 @@
+.App {
+  text-align: center;
+  display: flex;
+}
+
+.calendar {
+  flex: 1;
+  padding: 20px;
+}
+.App-header {
+  background-color: #fff;
+  flex: 0 0 20%;
+  height: calc(100vh);
+  color: 000;
+  overflow: scroll;
+  padding: 16px;
+
+}
+.fc-header-toolbar.fc-toolbar {
+  display: none !important;
+}
+
+.fc-day-today {
+  background-color: #fff !important;
+}
+
+.fc-event-main-frame {
+  color: #000;
+}
+
+.selected-item {
+  background-color: #cfeeef;
+}
+
+.class-tile {
+  border: 1px solid #b2bcc6;
+  border-radius: 8px;
+  cursor: pointer;
+  text-align: left;
+  margin-bottom: 20px;
+  transition: all 0.3s ease;
+}
+
+h4 {
+  font-size: 14px;
+  color: #1D584E;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 12px;
+  letter-spacing: 0px;
+  text-align: left;
+  margin-top: 0;
+  margin-bottom: 4px;
+  display: flex;
+  align-items: center;
+}
+
+h4 img {
+  width: 16px;
+  margin-right: 8px;
+}
+.class-times {
+  padding: 16px;
+}
+
+.info {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  border-top: 1px solid #b2bcc6;
+  padding: 16px;
+}
+
+.class-tile:hover {
+  box-shadow: 10px 10px 40px -20px #44556677;
+  transform: scale(1.01);
+}
+
+h3 {
+font-size: 18px;
+font-style: normal;
+font-weight: 400;
+line-height: 16px;
+letter-spacing: 0em;
+text-align: left;
+margin-bottom: 0;
+
+}
+
+.title {
+  font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 16px;
+    padding-bottom: 10px;
+    border-bottom: 3px solid #445566;
+
+}
+
+.header-info {
+  padding: 16px 0;
+  text-align: left;
+  margin-top: 16px;
+  margin-right: 24px;
+}
+
+.header-info h2 {
+  margin: 0;
+}
+.tut-group, .pra-group, .lec-group {
+}
+
+.fc-timegrid-event {
+  cursor: pointer;
+  transition: all 200ms ease;
+}
+.fc-timegrid-event:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
