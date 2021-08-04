@@ -10,7 +10,7 @@
 .App-header {
   background-color: #fff;
   flex: 0 0 20%;
-  height: calc(100vh);
+  height: calc(100vh - 60px);
   color: 000;
   overflow: scroll;
   padding: 16px;
@@ -20,6 +20,9 @@
   display: none !important;
 }
 
+.react-tabs {
+  width: 100%;
+}
 .fc-day-today {
   background-color: #fff !important;
 }
