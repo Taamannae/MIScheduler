@@ -45,7 +45,6 @@ export default class Fall extends React.Component {
   handleOnSearch = (string, results) => {
     // onSearch will have as the first callback parameter
     // the string searched and for the second the results.
-    // console.log(string, results)
     this.setState({
       color: hslToHex(Math.floor(Math.random() * 360) + 1, 71, 80)
     })
@@ -53,7 +52,6 @@ export default class Fall extends React.Component {
 
   handleOnHover = (result) => {
     // the item hovered
-    // console.log(result)
   }
 
   handleOnSelect = (item) => {
@@ -127,24 +125,16 @@ export default class Fall extends React.Component {
     var newSched = _.cloneDeep(this.state.schedule);
 
     let find = _.find(newSched, function (o) {
-      console.log(o.id, (time.course + time.semester));
-      console.log(o.title, `${time.course}: ${time.sessionType} - ${time.method}: ${time.instructor}`);
-      console.log(o.title.includes(time.sessionType));
+      // console.log(o.id, (time.course + ':' + time.sessionType));
+      // console.log(o.title, `${time.course}: ${time.sessionType} - ${time.method}: ${time.instructor}`);
+      // console.log(o.title.includes(time.sessionType));
 
-      return (o.id === time.course + time.semester && o.title === `${time.course}: ${time.sessionType} - ${time.method}: ${time.instructor}` && o.title.includes(time.sessionType))
+      return (o.id === time.course + ':' + time.sessionType && o.title.includes(time.sessionType))
 
     });
-
-    console.log('existing', newSched);
-
-
     if (find && (time.course !== "INF1602H" && time.sessionType !== 'LEC')) {
-      console.log('found');
       newSched = newSched.filter( el => el !== find);
     }
-
-    console.log('revmoved', newSched);
-
 
     let today = moment();
     let todayDay = today.day();
@@ -157,19 +147,17 @@ export default class Fall extends React.Component {
     let endTime = classTime[1]
 
     let times = {
-      id: time.course + time.semester,
+      id: time.course + ':' + time.sessionType,
       title: `${time.course}: ${time.sessionType} - ${time.method}: ${time.instructor}`,
       color: this.state.color,
       start: `${realday}T${this.convertTime(String(startTime), true)}`,
       end: `${realday}T${this.convertTime(String(endTime), false)}`,
     }
-
-    console.log('newscehd', newSched);
-
     this.setState({
       schedule: newSched.concat(times)
     })
 
+    localStorage.setItem('fallSched', newSched);
 
   }
 
@@ -179,6 +167,23 @@ export default class Fall extends React.Component {
     let sunday = today.subtract(todayDay, "days");
     let realday = sunday.add(DAYS[x.day], "days")
     return realday.format("YYYY-MM-DD");
+  }
+
+  handleDelete = (e) => {
+    console.log('erer', e);
+    var newSched = _.cloneDeep(this.state.schedule);
+    newSched = _.filter(newSched, function(el) {
+      console.log('hererererererer');
+      return !el.id.includes(e.course);
+    });
+
+
+    console.log(newSched);
+    this.setState({
+      schedule: newSched
+    });
+    localStorage.setItem('fallSched', newSched);
+
   }
 
   renderCourseOptions = () => {
@@ -195,7 +200,7 @@ export default class Fall extends React.Component {
 
         let className = ''
         let find = _.find(this.state.schedule, function (o) { 
-          return (o.id === x.course + x.semester && o.title === `${x.course}: ${x.sessionType} - ${x.method}: ${x.instructor}`)
+          return (o.id === x.course + ':' + x.sessionType && o.title === `${x.course}: ${x.sessionType} - ${x.method}: ${x.instructor}`)
         
         });
         if (find) {
@@ -259,6 +264,22 @@ export default class Fall extends React.Component {
           })} </div>)
 
       }
+
+      let buttons;
+      let self = this
+      let findClass = _.find(this.state.schedule, function (o) {
+        return (o.id.split(':')[0] === self.state.activeCourse.course)
+      });
+
+
+      if (findClass) {
+        buttons = (
+          <div className="delete-div">
+            <button onClick={(e) => this.handleDelete(self.state.activeCourse)}>Delete Class</button>
+          </div>
+        )
+      }
+
       if (tut.length > 0) {
         let self = this
 
@@ -278,7 +299,7 @@ export default class Fall extends React.Component {
                 let start = `${self.realday(x)}T${self.convertTime(String(startTime, true), true)}`;
                 let end = `${self.realday(x)}T${self.convertTime(String(endTime))}`
 
-                return (o.id === x.course + x.semester && o.title === `${x.course}: ${x.sessionType} - ${x.method}: ${x.instructor}` && o.start === start && o.end === end )
+                return (o.id === x.course + ':' + x.sessionType && o.title === `${x.course}: ${x.sessionType} - ${x.method}: ${x.instructor}` && o.start === start && o.end === end )
 
               });
               if (find) {
@@ -306,6 +327,8 @@ export default class Fall extends React.Component {
           <div className="header-info">
             <h4>{items[0].course}</h4>
             <h2>{items[0].title}</h2>
+            {buttons}
+
           </div>
           <div>
           <div className="lec-group">
@@ -323,18 +346,14 @@ export default class Fall extends React.Component {
 
   handleEvent = (e) => {
     let classId = e.event.id;
-    
-    let sem = classId.slice(-1);
-    let code = classId.slice(0, -1);
-    console.log(e.event);
+    let code = classId.split(':')[0];
     this.setState({
-      activeCourse: {course: code, sem: sem},
+      activeCourse: {course: code, sem: "F"},
       color: e.event.backgroundColor
     })
 
   }
   handleOnFocus = () => {
-    // console.log('Focused')
   }
 
   formatResult = (item) => {
@@ -342,7 +361,6 @@ export default class Fall extends React.Component {
     // return (<p dangerouslySetInnerHTML={{__html: '<strong>'+item+'</strong>'}}></p>); //To format result as html
   }
   render() {
-    console.log(this.state.schedule);
   return (
     <div className="App">
       <div className="App-header">
