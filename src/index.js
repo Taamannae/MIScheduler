@@ -15,3 +15,16 @@ ReactDOM.render(
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
+
+let items = document.getElementsByClassName('fc-col-header-cell-cushion');
+console.log(items);
+
+for (var item in items) {
+  let date = items[item];
+  let text = date.innerText;
+  console.log(text);
+  if (text && text.includes(' ')) {
+    text = text.split(' ')[0];
+    date.innerHTML = text
+  }
+}

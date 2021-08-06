@@ -8,6 +8,8 @@ import { ReactSearchAutocomplete } from 'react-search-autocomplete'
 import {COURSES} from './win.js'
 import _ from 'lodash'
 import moment from 'moment';
+import Button from './Button';
+import FeatherIcon from 'feather-icons-react';
 
 
 const DAYS = {Sunday: 0, Monday: 1, Tuesday: 2, Wednesday: 3, Thursday: 4, Friday: 5, Saturday: 6}
@@ -45,7 +47,6 @@ export default class Winter extends React.Component {
   handleOnSearch = (string, results) => {
     // onSearch will have as the first callback parameter
     // the string searched and for the second the results.
-    // console.log(string, results)
     this.setState({
       color: hslToHex(Math.floor(Math.random() * 360) + 1, 71, 80)
     })
@@ -53,7 +54,6 @@ export default class Winter extends React.Component {
 
   handleOnHover = (result) => {
     // the item hovered
-    // console.log(result)
   }
 
   handleOnSelect = (item) => {
@@ -102,7 +102,6 @@ export default class Winter extends React.Component {
 
       } else {
         if (startTime && (time === '9' || time === '10' || time === '11' || time === '12')) {
-          console.log("is AM");
           fullTime = time + ":00"
           if (time === '9') {
             fullTime = '0' + time + ":00"
@@ -128,24 +127,14 @@ export default class Winter extends React.Component {
     var newSched = _.cloneDeep(this.state.schedule);
 
     let find = _.find(newSched, function (o) {
-      console.log(o.id, (time.course + time.semester));
-      console.log(o.title, `${time.course}: ${time.sessionType} - ${time.method}: ${time.instructor}`);
-      console.log(o.title.includes(time.sessionType));
-
-      return (o.id === time.course + time.semester && o.title === `${time.course}: ${time.sessionType} - ${time.method}: ${time.instructor}` && o.title.includes(time.sessionType))
+      return (o.id === time.course + ':' + time.sessionType && o.title.includes(time.sessionType))
 
     });
+    if (time.course === "INF1602H" && time.sessionType === 'LEC') {
 
-    console.log('existing', newSched);
-
-
-    if (find && (time.course !== "INF1602H" && time.sessionType !== 'LEC')) {
-      console.log('found');
+    } else if (find) {
       newSched = newSched.filter( el => el !== find);
     }
-
-    console.log('revmoved', newSched);
-
 
     let today = moment();
     let todayDay = today.day();
@@ -158,19 +147,17 @@ export default class Winter extends React.Component {
     let endTime = classTime[1]
 
     let times = {
-      id: time.course + time.semester,
-      title: `${time.course}: ${time.sessionType} - ${time.method}: ${time.instructor}`,
+      id: time.course + ':' + time.sessionType,
+      title: `${time.course}: ${time.sessionType} ${time.section} - ${time.method}`,
       color: this.state.color,
       start: `${realday}T${this.convertTime(String(startTime), true)}`,
       end: `${realday}T${this.convertTime(String(endTime), false)}`,
     }
-
-    console.log('newscehd', newSched);
-
     this.setState({
       schedule: newSched.concat(times)
     })
 
+    localStorage.setItem('winterSched', newSched);
 
   }
 
@@ -180,6 +167,30 @@ export default class Winter extends React.Component {
     let sunday = today.subtract(todayDay, "days");
     let realday = sunday.add(DAYS[x.day], "days")
     return realday.format("YYYY-MM-DD");
+  }
+
+  handleDelete = (e) => {
+    var newSched = _.cloneDeep(this.state.schedule);
+    newSched = _.filter(newSched, function(el) {
+      return !el.id.includes(e.course);
+    });
+
+    this.setState({
+      schedule: newSched
+    });
+    localStorage.setItem('winterSched', newSched);
+
+  }
+
+  renderTile = (type, x, className) => {
+    return (
+      <div class={type + " class-tile " + className } onClick={() => this.addTime(x)}>
+          <div className="time-title">
+            <h3>{x.day} <br/>{x.time}</h3>
+            <h4>{x.sessionType} {x.section} <br /> {x.method}</h4>
+          </div>
+      </div>
+    )
   }
 
   renderCourseOptions = () => {
@@ -192,92 +203,110 @@ export default class Winter extends React.Component {
 
       let praGroup;
       let tutGroup;
-      let lecGroup = lec.map(x => {
+      let lecGroup; 
 
-        let className = ''
-        let find = _.find(this.state.schedule, function (o) { 
-          return (o.id === x.course + x.semester && o.title === `${x.course}: ${x.sessionType} - ${x.method}: ${x.instructor}`)
-        
-        });
-        if (find) {
-          className = 'selected-item'
-        }
-        return (
-          <div class={"class-tile " + className } onClick={() => this.addTime(x)}>
-              <div className="class-times">
-              <h4>{x.sessionType} {x.section}</h4>
-              <h3>{x.day} {x.time}</h3>
-              <p>{x.subtitle}</p>
-              </div>
-            <div className="info">
-              <h4><img src='/user.svg' alt="instructor"/>{x.instructor}</h4>
-              <h4><img src='/monitor.svg' alt="method" /> {x.method}</h4>
-            </div>
-            </div>
+      let buttons;
+      let self = this
+      let findClass = _.find(this.state.schedule, function (o) {
+        return (o.id.split(':')[0] === self.state.activeCourse.course)
+      });
+
+
+      if (findClass) {
+        buttons = (
+          <button onClick={(e) => this.handleDelete(self.state.activeCourse)}><FeatherIcon icon="trash" color="#c7364c" size="16px" /> <span style={{marginLeft: '5px'}}>Remove Class</span></button>
         )
-      })
+      }
+      
+      lecGroup = (
+        <div className="lec-group group-set">
+          <h3 className="title lec-title">Add a Lecture
+          
+            {buttons}</h3>
+          {lec.map(x => {
+
+            let className = ''
+            let find = _.find(this.state.schedule, function (o) {
+
+              console.log(o.id, x.course + ':' + x.sessionType );
+              console.log(o.title, `${x.course}: ${x.sessionType} ${x.section} - ${x.method}`);
+              return (o.id === x.course + ':' + x.sessionType && o.title === `${x.course}: ${x.sessionType} ${x.section} - ${x.method}`)
+            });
+
+            console.log(find);
+            if (find) {
+              className = 'selected-item'
+            }
+            return (
+              this.renderTile("lecGroup", x, className)
+            )
+          })}
+        </div>
+      )
 
       if (pra.length > 0) {
+        let self = this
+
         praGroup = (
           
-          <div className="pra-group">
+          <div className="pra-group  group-set">
             <h3 className="title">Add a practical</h3>
             {pra.map(x => {
 
               let className = ''
 
               let find = _.find(this.state.schedule, function (o) {
-                return (o.id === x.course + x.semester && o.title === `${x.course}: ${x.sessionType} - ${x.method}: ${x.instructor}` && o.title.includes(x.sessionType))
+                let classTime = x.time.split('-');
+                let startTime = classTime[0]
+                let endTime = classTime[1]
+
+                let start = `${self.realday(x)}T${self.convertTime(String(startTime, true), true)}`;
+                let end = `${self.realday(x)}T${self.convertTime(String(endTime))}`
+
+                return (o.id === x.course + ':' + x.sessionType && o.title === `${x.course}: ${x.sessionType} ${x.section} - ${x.method}` && o.start === start && o.end === end)
 
               });
+
               if (find) {
                 className = 'selected-item'
               }
 
           return (
+            this.renderTile("praGroup", x, className)
 
-
-            <div class={"class-tile " + className} onClick={() => this.addTime(x)}>
-              <div className="class-times">
-                <h4>{x.sessionType} {x.section}</h4>
-                <h3>{x.day} {x.time}</h3>
-              </div>
-              <div className="info">
-                <h4><img src='/user.svg' alt="instructor"/>{x.instructor}</h4>
-                <h4><img src='/monitor.svg' alt="method"/> {x.method}</h4>
-              </div>
-            </div>
           )
           })} </div>)
 
       }
+
       if (tut.length > 0) {
+        let self = this
+
         tutGroup = (
           
-          <div className="tut-group">
+          <div className="tut-group group-set">
             <h3 className="title">Add a tutorial</h3>
             {tut.map(x => {
 
               let className = ''
 
               let find = _.find(this.state.schedule, function (o) {
-                return (o.id === x.course + x.semester && o.title === `${x.course}: ${x.sessionType} - ${x.method}: ${x.instructor}` && o.title.includes(x.sessionType) )
+                let classTime = x.time.split('-');
+                let startTime = classTime[0]
+                let endTime = classTime[1]
+
+                let start = `${self.realday(x)}T${self.convertTime(String(startTime, true), true)}`;
+                let end = `${self.realday(x)}T${self.convertTime(String(endTime))}`
+
+                return (o.id === x.course + ':' + x.sessionType && o.title === `${x.course}: ${x.sessionType} ${x.section} - ${x.method}` && o.start === start && o.end === end )
 
               });
+
               if (find) {
                 className = 'selected-item'
               }
           return (
-            <div class={"class-tile " + className} onClick={() => this.addTime(x)}>
-              <div className="class-times">
-                <h4>{x.sessionType} {x.section}</h4>
-                <h3>{x.day} {x.time}</h3>
-              </div>
-              <div className="info">
-                <h4><img src='/user.svg' alt="instructor"/>{x.instructor}</h4>
-                <h4><img src='/monitor.svg' alt="method"/> {x.method}</h4>
-              </div>
-            </div>
+            this.renderTile("tutGroup", x, className)
           )
           })} </div>)
 
@@ -287,17 +316,26 @@ export default class Winter extends React.Component {
       return(
         <div>
           <div className="header-info">
-            <h4>{items[0].course}</h4>
-            <h2>{items[0].title}</h2>
+            
+
           </div>
           <div>
-          <div className="lec-group">
-            <h3 className="title">Add a Lecture</h3>
-            {lecGroup}
-          </div>
+
+          {lecGroup}
           {tutGroup}
           {praGroup}
           </div>
+        </div>
+      )
+    } else {
+      return (
+        <div className="welcome">
+          <img src="/reading.svg" alt=""/>
+          <h2 style={{marginTop: 12}}>Hello</h2>
+          <h2 style={{fontWeight: 400, marginBottom: 12}}>Winter Schedule</h2>
+          <p> Use this tool to build your UofT Masters of Information course schedule for Winter 2022. You can build a fall schedule above. <br /> <br /> Search for a course above with the course code or title. Then select lectures, practicums and tutorials.
+          Once you add a class you can come back and delete it or edit it by searching for the class or clicking on the event in the calendar
+          </p>
         </div>
       )
     }
@@ -306,18 +344,14 @@ export default class Winter extends React.Component {
 
   handleEvent = (e) => {
     let classId = e.event.id;
-    
-    let sem = classId.slice(-1);
-    let code = classId.slice(0, -1);
-    console.log(e.event);
+    let code = classId.split(':')[0];
     this.setState({
-      activeCourse: {course: code, sem: sem},
+      activeCourse: {course: code, sem: "F"},
       color: e.event.backgroundColor
     })
 
   }
   handleOnFocus = () => {
-    // console.log('Focused')
   }
 
   formatResult = (item) => {
@@ -325,22 +359,39 @@ export default class Winter extends React.Component {
     // return (<p dangerouslySetInnerHTML={{__html: '<strong>'+item+'</strong>'}}></p>); //To format result as html
   }
   render() {
-    console.log(this.state.schedule);
   return (
     <div className="App">
       <div className="App-header">
-        <div style={{width: '100%'}}>
-          <ReactSearchAutocomplete
-            items={items}
-            onSearch={this.handleOnSearch}
-            onHover={this.handleOnHover}
-            onSelect={this.handleOnSelect}
-            onFocus={this.handleOnFocus}
-            autoFocus
-            formatResult={this.formatResult}
-          />
+        <div>
+          <div className="nav-bar">
+           <img src="./logo.svg" height="25px" alt="logo"/>
+            <Button href="/"> Term: Winter</Button>
+
+          </div>
+          <div className="search">
+            <div style={{ width: '100%' }}>
+              <ReactSearchAutocomplete
+                items={items}
+                placeholder="Search for a winter 2022 class"
+                onSearch={this.handleOnSearch}
+                onHover={this.handleOnHover}
+                onSelect={this.handleOnSelect}
+                onFocus={this.handleOnFocus}
+                autoFocus
+                formatResult={this.formatResult}
+              />
+            </div>
+          </div>
         </div>
+        <div className="App-content">
         {this.renderCourseOptions()}
+        </div>
+        <div className="footer">
+          {/* <div>Help</div> */}
+          <div>
+            <p>Made by <a href="https://taamannae.dev/" target="_blank" rel="noreferrer">Tammy</a></p>
+          </div>
+        </div>
       </div>
 <div className="calendar">
       <FullCalendar
@@ -354,7 +405,6 @@ export default class Winter extends React.Component {
         eventClick={this.handleEvent}
         allDaySlot={false}
         slotDuration="01:00:00"
-        resources={['monday']}
         headerToolbar={{
           center: '',
           end: '',
@@ -363,7 +413,6 @@ export default class Winter extends React.Component {
         }}
       />
     </div>
-    
     </div>
   );
       }

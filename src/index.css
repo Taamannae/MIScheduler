@@ -11,6 +11,19 @@ code {
 }
 
 *{
-  font-family: 'Inter', sans-serif !important;
+  font-family: 'Graphik', sans-serif !important;
   
+}
+
+
+@font-face {
+  font-family: Graphik;
+  font-weight: 400;
+  src: url('./assets/fonts/Graphik-Regular.otf');
+}
+
+@font-face {
+  font-family: Graphik;
+  font-weight: 500;
+  src: url('./assets/fonts/Graphik-Semibold.otf');
 }
