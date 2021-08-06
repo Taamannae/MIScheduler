@@ -331,7 +331,7 @@ export default class Winter extends React.Component {
       return (
         <div className="welcome">
           <img src="/reading.svg" alt=""/>
-          <h2 style={{marginTop: 12}}>Hello</h2>
+          <h2 style={{marginTop: 12}}>Build a</h2>
           <h2 style={{fontWeight: 400, marginBottom: 12}}>Winter Schedule</h2>
           <p> Use this tool to build your UofT Masters of Information course schedule for Winter 2022. You can build a fall schedule above. <br /> <br /> Search for a course above with the course code or title. Then select lectures, practicums and tutorials.
           Once you add a class you can come back and delete it or edit it by searching for the class or clicking on the event in the calendar
