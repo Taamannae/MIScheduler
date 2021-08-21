@@ -1,5 +1,19 @@
 export const COURSES = [
     {
+        "course": "Course Code",
+        "title": "Course Title",
+        "subtitle": "Subtitle",
+        "sessionType": "LEC/PRA/TUT",
+        "section": "Section",
+        "day": "Day",
+        "time": "Time",
+        "method": "Delivery Method",
+        "instructor": "Instructor",
+        "instructor_two": "Instructor",
+        "notes": "Notes",
+        "semester": "S"
+    },
+    {
         "course": "BKS1002H",
         "title": "Book History in Practice",
         "subtitle": "",
@@ -10,12 +24,13 @@ export const COURSES = [
         "method": "In-Person",
         "instructor": "Claire Battershill",
         "instructor_two": "",
-        "notes": "BHPC collaborative specialization students only"
+        "notes": "BHPC collaborative specialization students only",
+        "semester": "S"
     },
     {
         "course": "BKS2000H",
         "title": "Advanced Seminar in Book History & Print Culture",
-        "subtitle": "Special Topic: Critical Approaches to Digitized and Born-Digital Texts",
+        "subtitle": "Critical Approaches to Digitized and Born-Digital Texts",
         "sessionType": "LEC",
         "section": "101",
         "day": "Thursday",
@@ -23,7 +38,8 @@ export const COURSES = [
         "method": "In-Person",
         "instructor": "Alan Galey",
         "instructor_two": "",
-        "notes": "Enrollment is prioritized for BHPC students but spaces will be available for non-BHPC students in Information and participating BHPC units"
+        "notes": "Enrollment is prioritized for BHPC students but spaces will be available for non-BHPC students in Information and participating BHPC units",
+        "semester": "S"
     },
     {
         "course": "INF1003H",
@@ -36,7 +52,8 @@ export const COURSES = [
         "method": "In-Person",
         "instructor": "TBD",
         "instructor_two": "",
-        "notes": ""
+        "notes": "",
+        "semester": "S"
     },
     {
         "course": "INF1005H",
@@ -49,7 +66,8 @@ export const COURSES = [
         "method": "In-Person",
         "instructor": "Colin Furness",
         "instructor_two": "",
-        "notes": "week of January 10, 2022 to week of February 14, 2022"
+        "notes": "week of January 10, 2022 to week of February 14, 2022",
+        "semester": "S"
     },
     {
         "course": "INF1005H",
@@ -62,7 +80,8 @@ export const COURSES = [
         "method": "In-Person",
         "instructor": "Stacy Allison-Cassin",
         "instructor_two": "",
-        "notes": "week of January 10, 2022 to week of February 14, 2022"
+        "notes": "week of January 10, 2022 to week of February 14, 2022",
+        "semester": "S"
     },
     {
         "course": "INF1005H",
@@ -75,7 +94,8 @@ export const COURSES = [
         "method": "In-Person",
         "instructor": "Maher Elshakankiri",
         "instructor_two": "",
-        "notes": ""
+        "notes": "week of January 10, 2022 to week of February 14, 2022",
+        "semester": "S"
     },
     {
         "course": "INF1005H",
@@ -88,7 +108,8 @@ export const COURSES = [
         "method": "In-Person",
         "instructor": "Christoph Becker",
         "instructor_two": "",
-        "notes": "week of January 10, 2022 to week of February 14, 2022"
+        "notes": "week of January 10, 2022 to week of February 14, 2022",
+        "semester": "S"
     },
     {
         "course": "INF1005H",
@@ -101,7 +122,8 @@ export const COURSES = [
         "method": "In-Person",
         "instructor": "Stacy Allison-Cassin",
         "instructor_two": "",
-        "notes": "week of January 10, 2022 to week of February 14, 2022"
+        "notes": "week of January 10, 2022 to week of February 14, 2022",
+        "semester": "S"
     },
     {
         "course": "INF1005H",
@@ -114,7 +136,8 @@ export const COURSES = [
         "method": "In-Person",
         "instructor": "TBD",
         "instructor_two": "",
-        "notes": "week of January 10, 2022 to week of February 14, 2022"
+        "notes": "week of January 10, 2022 to week of February 14, 2022",
+        "semester": "S"
     },
     {
         "course": "INF1005H",
@@ -125,9 +148,10 @@ export const COURSES = [
         "day": "Wednesday",
         "time": "9-12pm",
         "method": "In-Person",
-        "instructor": "TBD",
+        "instructor": "Victoria Owen",
         "instructor_two": "",
-        "notes": "week of January 10, 2022 to week of February 14, 2022"
+        "notes": "week of January 10, 2022 to week of February 14, 2022",
+        "semester": "S"
     },
     {
         "course": "INF1005H",
@@ -140,7 +164,8 @@ export const COURSES = [
         "method": "In-Person",
         "instructor": "TBD",
         "instructor_two": "",
-        "notes": "week of January 10, 2022 to week of February 14, 2022"
+        "notes": "week of January 10, 2022 to week of February 14, 2022",
+        "semester": "S"
     },
     {
         "course": "INF1005H",
@@ -153,7 +178,8 @@ export const COURSES = [
         "method": "In-Person",
         "instructor": "Periklis Andritsos",
         "instructor_two": "",
-        "notes": "week of January 10, 2022 to week of February 14, 2022"
+        "notes": "week of January 10, 2022 to week of February 14, 2022",
+        "semester": "S"
     },
     {
         "course": "INF1005H",
@@ -166,7 +192,8 @@ export const COURSES = [
         "method": "In-Person",
         "instructor": "TBD",
         "instructor_two": "",
-        "notes": "week of January 10, 2022 to week of February 14, 2022"
+        "notes": "week of January 10, 2022 to week of February 14, 2022",
+        "semester": "S"
     },
     {
         "course": "INF1005H",
@@ -179,7 +206,8 @@ export const COURSES = [
         "method": "In-Person",
         "instructor": "Laura Lovell-Anderson",
         "instructor_two": "",
-        "notes": "week of January 10, 2022 to week of February 14, 2022"
+        "notes": "week of January 10, 2022 to week of February 14, 2022",
+        "semester": "S"
     },
     {
         "course": "INF1005H",
@@ -192,7 +220,8 @@ export const COURSES = [
         "method": "In-Person",
         "instructor": "TBD",
         "instructor_two": "",
-        "notes": "week of January 10, 2022 to week of February 14, 2022"
+        "notes": "week of January 10, 2022 to week of February 14, 2022",
+        "semester": "S"
     },
     {
         "course": "INF1005H",
@@ -205,7 +234,8 @@ export const COURSES = [
         "method": "In-Person",
         "instructor": "Tegan Maharaj",
         "instructor_two": "",
-        "notes": "week of January 10, 2022 to week of February 14, 2022"
+        "notes": "week of January 10, 2022 to week of February 14, 2022",
+        "semester": "S"
     },
     {
         "course": "INF1005H",
@@ -216,9 +246,10 @@ export const COURSES = [
         "day": "Thursday",
         "time": "6:30-9:30pm",
         "method": "In-Person",
-        "instructor": "TBD",
+        "instructor": "Sarah English",
         "instructor_two": "",
-        "notes": "week of January 10, 2022 to week of February 14, 2022"
+        "notes": "week of January 10, 2022 to week of February 14, 2022",
+        "semester": "S"
     },
     {
         "course": "INF1005H",
@@ -231,7 +262,8 @@ export const COURSES = [
         "method": "In-Person",
         "instructor": "TBD",
         "instructor_two": "",
-        "notes": "week of January 10, 2022 to week of February 14, 2022"
+        "notes": "week of January 10, 2022 to week of February 14, 2022",
+        "semester": "S"
     },
     {
         "course": "INF1005H",
@@ -242,9 +274,10 @@ export const COURSES = [
         "day": "Saturday",
         "time": "1-4pm",
         "method": "In-Person",
-        "instructor": "TBD",
+        "instructor": "Hugh Samson",
         "instructor_two": "",
-        "notes": "week of January 10, 2022 to week of February 14, 2022"
+        "notes": "week of January 10, 2022 to week of February 14, 2022",
+        "semester": "S"
     },
     {
         "course": "INF1006H",
@@ -257,7 +290,8 @@ export const COURSES = [
         "method": "In-Person",
         "instructor": "Colin Furness",
         "instructor_two": "",
-        "notes": "week of February 28, 2022 to week of April 4, 2022"
+        "notes": "week of February 28, 2022 to week of April 4, 2022",
+        "semester": "S"
     },
     {
         "course": "INF1006H",
@@ -270,7 +304,8 @@ export const COURSES = [
         "method": "In-Person",
         "instructor": "Stacy Allison-Cassin",
         "instructor_two": "",
-        "notes": "week of February 28, 2022 to week of April 4, 2022"
+        "notes": "week of February 28, 2022 to week of April 4, 2022",
+        "semester": "S"
     },
     {
         "course": "INF1006H",
@@ -283,7 +318,8 @@ export const COURSES = [
         "method": "In-Person",
         "instructor": "Maher Elshakankiri",
         "instructor_two": "",
-        "notes": ""
+        "notes": "week of February 28, 2022 to week of April 4, 2022",
+        "semester": "S"
     },
     {
         "course": "INF1006H",
@@ -296,7 +332,8 @@ export const COURSES = [
         "method": "In-Person",
         "instructor": "Christoph Becker",
         "instructor_two": "",
-        "notes": "week of February 28, 2022 to week of April 4, 2022"
+        "notes": "week of February 28, 2022 to week of April 4, 2022",
+        "semester": "S"
     },
     {
         "course": "INF1006H",
@@ -309,7 +346,8 @@ export const COURSES = [
         "method": "In-Person",
         "instructor": "Stacy Allison-Cassin",
         "instructor_two": "",
-        "notes": "week of February 28, 2022 to week of April 4, 2022"
+        "notes": "week of February 28, 2022 to week of April 4, 2022",
+        "semester": "S"
     },
     {
         "course": "INF1006H",
@@ -322,7 +360,8 @@ export const COURSES = [
         "method": "In-Person",
         "instructor": "TBD",
         "instructor_two": "",
-        "notes": "week of February 28, 2022 to week of April 4, 2022"
+        "notes": "week of February 28, 2022 to week of April 4, 2022",
+        "semester": "S"
     },
     {
         "course": "INF1006H",
@@ -333,9 +372,10 @@ export const COURSES = [
         "day": "Wednesday",
         "time": "9-12pm",
         "method": "In-Person",
-        "instructor": "TBD",
+        "instructor": "Victoria Owen",
         "instructor_two": "",
-        "notes": "week of February 28, 2022 to week of April 4, 2022"
+        "notes": "week of February 28, 2022 to week of April 4, 2022",
+        "semester": "S"
     },
     {
         "course": "INF1006H",
@@ -348,7 +388,8 @@ export const COURSES = [
         "method": "In-Person",
         "instructor": "TBD",
         "instructor_two": "",
-        "notes": "week of February 28, 2022 to week of April 4, 2022"
+        "notes": "week of February 28, 2022 to week of April 4, 2022",
+        "semester": "S"
     },
     {
         "course": "INF1006H",
@@ -361,7 +402,8 @@ export const COURSES = [
         "method": "In-Person",
         "instructor": "Periklis Andritsos",
         "instructor_two": "",
-        "notes": "week of February 28, 2022 to week of April 4, 2022"
+        "notes": "week of February 28, 2022 to week of April 4, 2022",
+        "semester": "S"
     },
     {
         "course": "INF1006H",
@@ -374,7 +416,8 @@ export const COURSES = [
         "method": "In-Person",
         "instructor": "TBD",
         "instructor_two": "",
-        "notes": "week of February 28, 2022 to week of April 4, 2022"
+        "notes": "week of February 28, 2022 to week of April 4, 2022",
+        "semester": "S"
     },
     {
         "course": "INF1006H",
@@ -387,7 +430,8 @@ export const COURSES = [
         "method": "In-Person",
         "instructor": "Laura Lovell-Anderson",
         "instructor_two": "",
-        "notes": "week of February 28, 2022 to week of April 4, 2022"
+        "notes": "week of February 28, 2022 to week of April 4, 2022",
+        "semester": "S"
     },
     {
         "course": "INF1006H",
@@ -400,7 +444,8 @@ export const COURSES = [
         "method": "In-Person",
         "instructor": "TBD",
         "instructor_two": "",
-        "notes": "week of February 28, 2022 to week of April 4, 2022"
+        "notes": "week of February 28, 2022 to week of April 4, 2022",
+        "semester": "S"
     },
     {
         "course": "INF1006H",
@@ -413,7 +458,8 @@ export const COURSES = [
         "method": "In-Person",
         "instructor": "Tegan Maharaj",
         "instructor_two": "",
-        "notes": "week of February 28, 2022 to week of April 4, 2022"
+        "notes": "week of February 28, 2022 to week of April 4, 2022",
+        "semester": "S"
     },
     {
         "course": "INF1006H",
@@ -424,9 +470,10 @@ export const COURSES = [
         "day": "Thursday",
         "time": "6:30-9:30pm",
         "method": "In-Person",
-        "instructor": "TBD",
+        "instructor": "Sarah English",
         "instructor_two": "",
-        "notes": "week of February 28, 2022 to week of April 4, 2022"
+        "notes": "week of February 28, 2022 to week of April 4, 2022",
+        "semester": "S"
     },
     {
         "course": "INF1006H",
@@ -439,7 +486,8 @@ export const COURSES = [
         "method": "In-Person",
         "instructor": "TBD",
         "instructor_two": "",
-        "notes": "week of February 28, 2022 to week of April 4, 2022"
+        "notes": "week of February 28, 2022 to week of April 4, 2022",
+        "semester": "S"
     },
     {
         "course": "INF1006H",
@@ -450,9 +498,10 @@ export const COURSES = [
         "day": "Saturday",
         "time": "1-4pm",
         "method": "In-Person",
-        "instructor": "TBD",
+        "instructor": "Hugh Samson",
         "instructor_two": "",
-        "notes": "week of February 28, 2022 to week of April 4, 2022"
+        "notes": "week of February 28, 2022 to week of April 4, 2022",
+        "semester": "S"
     },
     {
         "course": "INF1240H",
@@ -465,7 +514,8 @@ export const COURSES = [
         "method": "In-Person",
         "instructor": "Brian Griffin",
         "instructor_two": "",
-        "notes": ""
+        "notes": "",
+        "semester": "S"
     },
     {
         "course": "INF1322H",
@@ -478,7 +528,8 @@ export const COURSES = [
         "method": "In-Person",
         "instructor": "Nadia Caidi",
         "instructor_two": "",
-        "notes": ""
+        "notes": "",
+        "semester": "S"
     },
     {
         "course": "INF1322H",
@@ -491,7 +542,8 @@ export const COURSES = [
         "method": "In-Person",
         "instructor": "Nadia Caidi",
         "instructor_two": "",
-        "notes": ""
+        "notes": "",
+        "semester": "S"
     },
     {
         "course": "INF1324H",
@@ -504,7 +556,8 @@ export const COURSES = [
         "method": "In-Person",
         "instructor": "Siobhan Stevenson",
         "instructor_two": "",
-        "notes": ""
+        "notes": "",
+        "semester": "S"
     },
     {
         "course": "INF1324H",
@@ -517,7 +570,8 @@ export const COURSES = [
         "method": "In-Person",
         "instructor": "Siobhan Stevenson",
         "instructor_two": "",
-        "notes": ""
+        "notes": "",
+        "semester": "S"
     },
     {
         "course": "INF1331H",
@@ -530,7 +584,8 @@ export const COURSES = [
         "method": "In-Person",
         "instructor": "Karen Suurtamm",
         "instructor_two": "",
-        "notes": ""
+        "notes": "",
+        "semester": "S"
     },
     {
         "course": "INF1341H",
@@ -543,7 +598,8 @@ export const COURSES = [
         "method": "In-Person",
         "instructor": "Eric Yu",
         "instructor_two": "",
-        "notes": "non-ISD concentration MI students take in the winter only"
+        "notes": "non-ISD concentration MI students take in the winter only",
+        "semester": "S"
     },
     {
         "course": "INF1342H",
@@ -556,7 +612,8 @@ export const COURSES = [
         "method": "In-Person",
         "instructor": "Christoph Becker",
         "instructor_two": "",
-        "notes": ""
+        "notes": "",
+        "semester": "S"
     },
     {
         "course": "INF1342H",
@@ -569,7 +626,8 @@ export const COURSES = [
         "method": "In-Person",
         "instructor": "Christoph Becker",
         "instructor_two": "",
-        "notes": ""
+        "notes": "",
+        "semester": "S"
     },
     {
         "course": "INF1343H",
@@ -582,7 +640,8 @@ export const COURSES = [
         "method": "In-Person",
         "instructor": "TBD",
         "instructor_two": "",
-        "notes": "need to choose a tutorial along with the lecture"
+        "notes": "need to choose a tutorial along with the lecture",
+        "semester": "S"
     },
     {
         "course": "INF1343H",
@@ -591,11 +650,12 @@ export const COURSES = [
         "sessionType": "LEC",
         "section": "101",
         "day": "Friday",
-        "time": "10-12p",
+        "time": "10-12pm",
         "method": "In-Person",
         "instructor": "Maher Elshakankiri",
         "instructor_two": "",
-        "notes": ""
+        "notes": "",
+        "semester": "S"
     },
     {
         "course": "INF1343H",
@@ -608,7 +668,8 @@ export const COURSES = [
         "method": "In-Person",
         "instructor": "TBD",
         "instructor_two": "",
-        "notes": ""
+        "notes": "",
+        "semester": "S"
     },
     {
         "course": "INF1502H",
@@ -621,7 +682,8 @@ export const COURSES = [
         "method": "In-Person",
         "instructor": "TBD",
         "instructor_two": "",
-        "notes": "2nd year MI students only"
+        "notes": "2nd year MI students only",
+        "semester": "S"
     },
     {
         "course": "INF2040H",
@@ -632,9 +694,10 @@ export const COURSES = [
         "day": "Tuesday",
         "time": "6:30-9:30pm",
         "method": "In-Person",
-        "instructor": "TBD",
+        "instructor": "Sunita Guyadeen",
         "instructor_two": "",
-        "notes": ""
+        "notes": "",
+        "semester": "S"
     },
     {
         "course": "INF2040H",
@@ -645,9 +708,10 @@ export const COURSES = [
         "day": "Friday",
         "time": "9-12pm",
         "method": "In-Person",
-        "instructor": "TBD",
+        "instructor": "Sunita Guyadeen",
         "instructor_two": "",
-        "notes": ""
+        "notes": "",
+        "semester": "S"
     },
     {
         "course": "INF2115H",
@@ -660,7 +724,8 @@ export const COURSES = [
         "method": "In-Person",
         "instructor": "TBD",
         "instructor_two": "",
-        "notes": ""
+        "notes": "",
+        "semester": "S"
     },
     {
         "course": "INF2120H",
@@ -673,7 +738,8 @@ export const COURSES = [
         "method": "In-Person",
         "instructor": "TBD",
         "instructor_two": "",
-        "notes": ""
+        "notes": "",
+        "semester": "S"
     },
     {
         "course": "INF2135H",
@@ -686,7 +752,8 @@ export const COURSES = [
         "method": "In-Person",
         "instructor": "TBD",
         "instructor_two": "",
-        "notes": ""
+        "notes": "",
+        "semester": "S"
     },
     {
         "course": "INF2141H",
@@ -699,7 +766,8 @@ export const COURSES = [
         "method": "In-Person",
         "instructor": "Sara Grimes",
         "instructor_two": "",
-        "notes": ""
+        "notes": "",
+        "semester": "S"
     },
     {
         "course": "INF2145H",
@@ -711,8 +779,9 @@ export const COURSES = [
         "time": "6:30-9:30pm",
         "method": "In-Person",
         "instructor": "Eliza Sze",
-        "instructor_two": "",
-        "notes": ""
+        "instructor_two": "May Chan",
+        "notes": "",
+        "semester": "S"
     },
     {
         "course": "INF2162H",
@@ -723,9 +792,10 @@ export const COURSES = [
         "day": "Wednesday",
         "time": "9-12pm",
         "method": "In-Person",
-        "instructor": "TBD",
+        "instructor": "Timothy Perry",
         "instructor_two": "",
-        "notes": "2nd year students only"
+        "notes": "2nd year students only",
+        "semester": "S"
     },
     {
         "course": "INF2165H",
@@ -738,7 +808,8 @@ export const COURSES = [
         "method": "In-Person",
         "instructor": "TBD",
         "instructor_two": "",
-        "notes": ""
+        "notes": "",
+        "semester": "S"
     },
     {
         "course": "INF2165H",
@@ -749,9 +820,10 @@ export const COURSES = [
         "day": "Tuesday",
         "time": "6-9pm",
         "method": "In-Person",
-        "instructor": "TBD",
-        "instructor_two": "",
-        "notes": ""
+        "instructor": "Catherine Tunney Braeken",
+        "instructor_two": "TBD",
+        "notes": "",
+        "semester": "S"
     },
     {
         "course": "INF2169H",
@@ -764,33 +836,36 @@ export const COURSES = [
         "method": "In-Person",
         "instructor": "Velian Pandeliev",
         "instructor_two": "",
-        "notes": ""
+        "notes": "",
+        "semester": "S"
     },
     {
         "course": "INF2171H",
-        "title": "Usability Assessment",
+        "title": "Usability Assessment: Concepts, Methods and Tools",
         "subtitle": "",
         "sessionType": "LEC",
         "section": "101",
-        "day": "Wednesday",
+        "day": "Friday",
         "time": "1-4pm",
         "method": "In-Person",
-        "instructor": "TBD",
+        "instructor": "Steve Szigeti",
         "instructor_two": "",
-        "notes": ""
+        "notes": "",
+        "semester": "S"
     },
     {
         "course": "INF2171H",
-        "title": "Usability Assessment",
+        "title": "Usability Assessment: Concepts, Methods and Tools",
         "subtitle": "",
         "sessionType": "LEC",
         "section": "102",
         "day": "Thursday",
         "time": "6:30-9:30pm",
         "method": "In-Person",
-        "instructor": "TBD",
+        "instructor": "Steve Szigeti",
         "instructor_two": "",
-        "notes": ""
+        "notes": "",
+        "semester": "S"
     },
     {
         "course": "INF2173H",
@@ -803,7 +878,8 @@ export const COURSES = [
         "method": "In-Person",
         "instructor": "TBD",
         "instructor_two": "",
-        "notes": "2nd year MI students only"
+        "notes": "2nd year MI students only",
+        "semester": "S"
     },
     {
         "course": "INF2175H",
@@ -814,9 +890,10 @@ export const COURSES = [
         "day": "Wednesday",
         "time": "6:30-9:30pm",
         "method": "In-Person",
-        "instructor": "TBD",
+        "instructor": "Tys Klumpenhouwer",
         "instructor_two": "",
-        "notes": ""
+        "notes": "",
+        "semester": "S"
     },
     {
         "course": "INF2177H",
@@ -829,7 +906,8 @@ export const COURSES = [
         "method": "In-Person",
         "instructor": "Eric Yu",
         "instructor_two": "",
-        "notes": "recommended to be taken in 2nd year"
+        "notes": "recommended to be taken in 2nd year",
+        "semester": "S"
     },
     {
         "course": "INF2178H",
@@ -842,7 +920,8 @@ export const COURSES = [
         "method": "In-Person",
         "instructor": "Shion Guha",
         "instructor_two": "",
-        "notes": "need to chose a tutorial along with the lecture"
+        "notes": "need to chose a tutorial along with the lecture",
+        "semester": "S"
     },
     {
         "course": "INF2178H",
@@ -855,7 +934,8 @@ export const COURSES = [
         "method": "In-Person",
         "instructor": "TBD",
         "instructor_two": "",
-        "notes": ""
+        "notes": "",
+        "semester": "S"
     },
     {
         "course": "INF2178H",
@@ -868,7 +948,8 @@ export const COURSES = [
         "method": "In-Person",
         "instructor": "TBD",
         "instructor_two": "",
-        "notes": ""
+        "notes": "",
+        "semester": "S"
     },
     {
         "course": "INF2178H",
@@ -881,7 +962,8 @@ export const COURSES = [
         "method": "In-Person",
         "instructor": "TBD",
         "instructor_two": "",
-        "notes": ""
+        "notes": "",
+        "semester": "S"
     },
     {
         "course": "INF2178H",
@@ -894,7 +976,8 @@ export const COURSES = [
         "method": "In-Person",
         "instructor": "TBD",
         "instructor_two": "",
-        "notes": ""
+        "notes": "",
+        "semester": "S"
     },
     {
         "course": "INF2181H",
@@ -905,9 +988,10 @@ export const COURSES = [
         "day": "Tuesday",
         "time": "9-12pm",
         "method": "In-Person",
-        "instructor": "TBD",
+        "instructor": "Victoria Owen",
         "instructor_two": "",
-        "notes": ""
+        "notes": "",
+        "semester": "S"
     },
     {
         "course": "INF2184H",
@@ -920,7 +1004,8 @@ export const COURSES = [
         "method": "In-Person",
         "instructor": "Karen Suurtamm",
         "instructor_two": "",
-        "notes": ""
+        "notes": "",
+        "semester": "S"
     },
     {
         "course": "INF2186H",
@@ -931,9 +1016,10 @@ export const COURSES = [
         "day": "Monday",
         "time": "9-12pm",
         "method": "In-Person",
-        "instructor": "TBD",
+        "instructor": "Asen Ivanov",
         "instructor_two": "",
-        "notes": ""
+        "notes": "",
+        "semester": "S"
     },
     {
         "course": "INF2186H",
@@ -946,7 +1032,8 @@ export const COURSES = [
         "method": "In-Person",
         "instructor": "TBD",
         "instructor_two": "",
-        "notes": ""
+        "notes": "",
+        "semester": "S"
     },
     {
         "course": "INF2190H",
@@ -959,7 +1046,8 @@ export const COURSES = [
         "method": "In-Person",
         "instructor": "TBD",
         "instructor_two": "",
-        "notes": ""
+        "notes": "",
+        "semester": "S"
     },
     {
         "course": "INF2191H",
@@ -970,9 +1058,10 @@ export const COURSES = [
         "day": "Wednesday",
         "time": "9-12pm",
         "method": "In-Person",
-        "instructor": "Olivier St-Cyr",
+        "instructor": "Velian Pandeliev",
         "instructor_two": "",
-        "notes": ""
+        "notes": "",
+        "semester": "S"
     },
     {
         "course": "INF2191H",
@@ -985,7 +1074,22 @@ export const COURSES = [
         "method": "In-Person",
         "instructor": "Velian Pandeliev",
         "instructor_two": "",
-        "notes": ""
+        "notes": "",
+        "semester": "S"
+    },
+    {
+        "course": "INF2191H",
+        "title": "User Interface Design",
+        "subtitle": "",
+        "sessionType": "LEC",
+        "section": "103",
+        "day": "Thursday",
+        "time": "9-12pm",
+        "method": "In-Person",
+        "instructor": "Velian Pandeliev",
+        "instructor_two": "",
+        "notes": "",
+        "semester": "S"
     },
     {
         "course": "INF2192H",
@@ -998,7 +1102,8 @@ export const COURSES = [
         "method": "In-Person",
         "instructor": "Priyank Chandra",
         "instructor_two": "Olivier St-Cyr",
-        "notes": "2nd year MI students only"
+        "notes": "2nd year MI students only",
+        "semester": "S"
     },
     {
         "course": "INF2192H",
@@ -1011,7 +1116,8 @@ export const COURSES = [
         "method": "In-Person",
         "instructor": "Priyank Chandra",
         "instructor_two": "Olivier St-Cyr",
-        "notes": "2nd year MI students only"
+        "notes": "2nd year MI students only",
+        "semester": "S"
     },
     {
         "course": "INF2200H",
@@ -1024,7 +1130,8 @@ export const COURSES = [
         "method": "In-Person",
         "instructor": "TBD",
         "instructor_two": "",
-        "notes": ""
+        "notes": "",
+        "semester": "S"
     },
     {
         "course": "INF2202H",
@@ -1037,7 +1144,8 @@ export const COURSES = [
         "method": "In-Person",
         "instructor": "TBD",
         "instructor_two": "",
-        "notes": ""
+        "notes": "",
+        "semester": "S"
     },
     {
         "course": "INF2203H",
@@ -1050,7 +1158,8 @@ export const COURSES = [
         "method": "In-Person",
         "instructor": "TBD",
         "instructor_two": "",
-        "notes": ""
+        "notes": "",
+        "semester": "S"
     },
     {
         "course": "INF2210H",
@@ -1063,7 +1172,8 @@ export const COURSES = [
         "method": "In-Person",
         "instructor": "Seamus Ross",
         "instructor_two": "",
-        "notes": "2nd year MI students only"
+        "notes": "2nd year MI students only",
+        "semester": "S"
     },
     {
         "course": "INF2226H",
@@ -1076,7 +1186,8 @@ export const COURSES = [
         "method": "In-Person",
         "instructor": "Patrick Keilty",
         "instructor_two": "",
-        "notes": ""
+        "notes": "",
+        "semester": "S"
     },
     {
         "course": "INF2235H",
@@ -1089,11 +1200,12 @@ export const COURSES = [
         "method": "In-Person",
         "instructor": "Marie Pier Boucher",
         "instructor_two": "",
-        "notes": ""
+        "notes": "",
+        "semester": "S"
     },
     {
         "course": "INF2239H",
-        "title": "Information, Misinformation & Health",
+        "title": "Information, Misinformation, and Health",
         "subtitle": "",
         "sessionType": "LEC",
         "section": "101",
@@ -1102,7 +1214,8 @@ export const COURSES = [
         "method": "In-Person",
         "instructor": "Colin Furness",
         "instructor_two": "",
-        "notes": "approved, course is being set up"
+        "notes": "",
+        "semester": "S"
     },
     {
         "course": "INF2241H",
@@ -1115,7 +1228,8 @@ export const COURSES = [
         "method": "In-Person",
         "instructor": "Dan Southwick",
         "instructor_two": "",
-        "notes": ""
+        "notes": "",
+        "semester": "S"
     },
     {
         "course": "INF2242H",
@@ -1128,7 +1242,8 @@ export const COURSES = [
         "method": "In-Person",
         "instructor": "Jeff Boase",
         "instructor_two": "",
-        "notes": ""
+        "notes": "",
+        "semester": "S"
     },
     {
         "course": "INF2243H",
@@ -1141,7 +1256,8 @@ export const COURSES = [
         "method": "In-Person",
         "instructor": "Leslie Shade",
         "instructor_two": "",
-        "notes": ""
+        "notes": "",
+        "semester": "S"
     },
     {
         "course": "INF2245H",
@@ -1154,7 +1270,8 @@ export const COURSES = [
         "method": "In-Person",
         "instructor": "Julie Chen",
         "instructor_two": "",
-        "notes": ""
+        "notes": "",
+        "semester": "S"
     },
     {
         "course": "INF2246H",
@@ -1167,7 +1284,8 @@ export const COURSES = [
         "method": "In-Person",
         "instructor": "Julie Hannaford",
         "instructor_two": "",
-        "notes": ""
+        "notes": "",
+        "semester": "S"
     },
     {
         "course": "INF2250H",
@@ -1178,9 +1296,10 @@ export const COURSES = [
         "day": "Wednesday",
         "time": "9-12pm",
         "method": "In-Person",
-        "instructor": "TBD",
+        "instructor": "Jean Dryden",
         "instructor_two": "",
-        "notes": ""
+        "notes": "",
+        "semester": "S"
     },
     {
         "course": "INF2256H",
@@ -1193,7 +1312,8 @@ export const COURSES = [
         "method": "In-Person",
         "instructor": "TBD",
         "instructor_two": "",
-        "notes": "approved, course is being set up"
+        "notes": "",
+        "semester": "S"
     },
     {
         "course": "INF2304H",
@@ -1206,7 +1326,8 @@ export const COURSES = [
         "method": "In-Person",
         "instructor": "Olivier St-Cyr",
         "instructor_two": "",
-        "notes": "ARM, LIS and MMSt students only"
+        "notes": "ARM, LIS and MMSt students only",
+        "semester": "S"
     },
     {
         "course": "INF2317H",
@@ -1219,20 +1340,8 @@ export const COURSES = [
         "method": "In-Person",
         "instructor": "Leslie Shade",
         "instructor_two": "",
-        "notes": ""
-    },
-    {
-        "course": "INF2319H",
-        "title": "Critical Approaches to Multiculturalism, Information, and Social Integration",
-        "subtitle": "",
-        "sessionType": "LEC",
-        "section": "101",
-        "day": "Thursday",
-        "time": "9-12pm",
-        "method": "In-Person",
-        "instructor": "Sherry Yu",
-        "instructor_two": "",
-        "notes": ""
+        "notes": "",
+        "semester": "S"
     },
     {
         "course": "INF2320H",
@@ -1245,7 +1354,8 @@ export const COURSES = [
         "method": "In-Person",
         "instructor": "Sara Grimes",
         "instructor_two": "",
-        "notes": ""
+        "notes": "",
+        "semester": "S"
     },
     {
         "course": "INF2331H",
@@ -1258,7 +1368,8 @@ export const COURSES = [
         "method": "In-Person",
         "instructor": "Alan Galey",
         "instructor_two": "",
-        "notes": ""
+        "notes": "",
+        "semester": "S"
     },
     {
         "course": "INF2403H",
@@ -1269,9 +1380,10 @@ export const COURSES = [
         "day": "Thursday",
         "time": "9-12pm",
         "method": "In-Person",
-        "instructor": "TBD",
+        "instructor": "Grant Hurley",
         "instructor_two": "",
-        "notes": "2nd year MI students only"
+        "notes": "2nd year MI students only",
+        "semester": "S"
     },
     {
         "course": "INF2XXXH",
@@ -1284,7 +1396,8 @@ export const COURSES = [
         "method": "In-Person",
         "instructor": "Anastasia Kuzminykh",
         "instructor_two": "",
-        "notes": "pending approval"
+        "notes": "pending approval",
+        "semester": "S"
     },
     {
         "course": "INF2XXXH",
@@ -1297,7 +1410,8 @@ export const COURSES = [
         "method": "In-Person",
         "instructor": "Aviv Shachak",
         "instructor_two": "",
-        "notes": "pending approval"
+        "notes": "pending approval",
+        "semester": "S"
     },
     {
         "course": "INF2XXXH",
@@ -1310,7 +1424,8 @@ export const COURSES = [
         "method": "In-Person",
         "instructor": "Claire Battershill",
         "instructor_two": "",
-        "notes": "pending approval"
+        "notes": "pending approval",
+        "semester": "S"
     },
     {
         "course": "INF2XXXH",
@@ -1323,7 +1438,8 @@ export const COURSES = [
         "method": "In-Person",
         "instructor": "Tony Tang",
         "instructor_two": "",
-        "notes": "pending approval"
+        "notes": "pending approval",
+        "semester": "S"
     },
     {
         "course": "INF3003H",
@@ -1336,7 +1452,8 @@ export const COURSES = [
         "method": "In-Person",
         "instructor": "Costis Dallas",
         "instructor_two": "",
-        "notes": "PhD students only"
+        "notes": "PhD students only",
+        "semester": "S"
     },
     {
         "course": "INF3009H",
@@ -1349,7 +1466,8 @@ export const COURSES = [
         "method": "In-Person",
         "instructor": "Beth Coleman",
         "instructor_two": "",
-        "notes": "PhD students only"
+        "notes": "PhD students only",
+        "semester": "S"
     },
     {
         "course": "MSL1150H",
@@ -1362,7 +1480,8 @@ export const COURSES = [
         "method": "In-Person",
         "instructor": "Costis Dallas",
         "instructor_two": "Cara Krmpotich",
-        "notes": ""
+        "notes": "",
+        "semester": "S"
     },
     {
         "course": "MSL1230H",
@@ -1373,9 +1492,10 @@ export const COURSES = [
         "day": "Monday",
         "time": "9-12pm",
         "method": "In-Person",
-        "instructor": "TBA",
+        "instructor": "Armando Perla",
         "instructor_two": "",
-        "notes": ""
+        "notes": "",
+        "semester": "S"
     },
     {
         "course": "MSL1300H",
@@ -1388,7 +1508,8 @@ export const COURSES = [
         "method": "In-Person",
         "instructor": "Alan Stanbridge",
         "instructor_two": "",
-        "notes": ""
+        "notes": "",
+        "semester": "S"
     },
     {
         "course": "MSL2100H",
@@ -1401,7 +1522,8 @@ export const COURSES = [
         "method": "In-Person",
         "instructor": "Susan Maltby",
         "instructor_two": "",
-        "notes": "intensive, 6 weeks, 9-5pm on Fridays"
+        "notes": "2nd year students, intensive, 6 weeks, 9-5pm on Fridays",
+        "semester": "S"
     },
     {
         "course": "MSL2115H",
@@ -1414,7 +1536,8 @@ export const COURSES = [
         "method": "In-Person",
         "instructor": "TBD",
         "instructor_two": "",
-        "notes": ""
+        "notes": "",
+        "semester": "S"
     },
     {
         "course": "MSL2230H",
@@ -1427,7 +1550,8 @@ export const COURSES = [
         "method": "In-Person",
         "instructor": "TBD",
         "instructor_two": "",
-        "notes": ""
+        "notes": "",
+        "semester": "S"
     },
     {
         "course": "MSL2326H",
@@ -1440,7 +1564,8 @@ export const COURSES = [
         "method": "In-Person",
         "instructor": "TBD",
         "instructor_two": "",
-        "notes": "Transitioned from special topics course (MSL2301H) to regular course"
+        "notes": "Transitioned from special topics course (MSL2301H) to regular course",
+        "semester": "S"
     },
     {
         "course": "MSL2335H",
@@ -1453,7 +1578,8 @@ export const COURSES = [
         "method": "In-Person",
         "instructor": "TBD",
         "instructor_two": "",
-        "notes": "Transitioned from special topics course (MSL2301H) to regular course"
+        "notes": "Transitioned from special topics course (MSL2301H) to regular course",
+        "semester": "S"
     },
     {
         "course": "MSL2352H",
@@ -1466,7 +1592,8 @@ export const COURSES = [
         "method": "In-Person",
         "instructor": "TBD",
         "instructor_two": "",
-        "notes": "Transitioned from special topics course (MSL2302H) to regular course"
+        "notes": "Transitioned from special topics course (MSL2302H) to regular course",
+        "semester": "S"
     },
     {
         "course": "MSL3000H",
@@ -1477,9 +1604,10 @@ export const COURSES = [
         "day": "Friday",
         "time": "1-4pm",
         "method": "In-Person",
-        "instructor": "TBD",
+        "instructor": "Armando Perla",
         "instructor_two": "",
-        "notes": "full year course, 2nd year MMSt students only"
+        "notes": "full year course, 2nd year MMSt students only",
+        "semester": "S"
     },
     {
         "course": "MSL4000Y",
@@ -1492,6 +1620,7 @@ export const COURSES = [
         "method": "In-Person",
         "instructor": "Cara Krmpotich",
         "instructor_two": "Irina Mihalache",
-        "notes": "2nd year MMSt students only, possibly with online components"
+        "notes": "full year course, 2nd year MMSt students only, possibly with online components",
+        "semester": "S"
     }
 ]

@@ -167,7 +167,12 @@ button {
   justify-content: space-between;
 }
 
-
+.footer-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
 
 .class-tile {
   border: none;
@@ -233,7 +238,20 @@ h4 img {
   text-transform: uppercase;
   letter-spacing: 2px;
   font-weight: 700;
-  color: #7f889b;
+  color: #646b79;
+}
+
+.fc-event-main {
+  padding: 4px 4px 0px !important;
+  border-radius: 8px;
+}
+.fc-timegrid-event {
+  border-radius: 8px !important;
+  
+}
+
+.fc-event-time {
+  font-weight: 600;
 }
 
 .fc-timegrid-axis {

@@ -14,6 +14,15 @@ import FeatherIcon from 'feather-icons-react';
 
 const DAYS = {Sunday: 0, Monday: 1, Tuesday: 2, Wednesday: 3, Thursday: 4, Friday: 5, Saturday: 6}
 
+let COLORS = {
+  0: { bg: '#E4EAFF', text: '#061650', border:'#2B50D2'},
+  1: { bg: '#FFDBE6', text: '#2A1115', border:'#8B073F'},
+  2: { bg: '#EDFFE4', text: '#112A27', border:'#3B8C09'},
+  3: { bg: '#FFF8DB', text: '#3B2805', border:'#F09000'},
+  4: { bg: '#EBDBFF', text: '#2D053B', border:'#810EC8'},
+  5: { bg: '#DBFFF6', text: '#03342B', border:'#05827A'},
+  6: { bg: '#FFEFDB', text: '#3B2805', border:'#C87800'},
+}
 function isCourse(a, b) {
   return a.course === b.course
 }
@@ -144,11 +153,11 @@ export default class Fall extends React.Component {
 
     let classTime = time.time.split('-');
     let startTime = classTime[0]
-    let endTime = classTime[1]
+    let endTime = classTime[1];
 
     let times = {
       id: time.course + ':' + time.sessionType,
-      title: `${time.course}: ${time.sessionType} ${time.section} - ${time.method}`,
+      title: `${time.course}: ${time.sessionType} ${time.section} - ${time.method} ${time.room}`,
       color: this.state.color,
       start: `${realday}T${this.convertTime(String(startTime), true)}`,
       end: `${realday}T${this.convertTime(String(endTime), false)}`,
@@ -388,7 +397,8 @@ export default class Fall extends React.Component {
         </div>
         <div className="footer">
           {/* <div>Help</div> */}
-          <div>
+          <div className="footer-content">
+            <p>Last Edit: Aug 20</p>
             <p>Built by <a href="https://taamannae.dev/" target="_blank" rel="noreferrer">Tammy</a></p>
           </div>
         </div>

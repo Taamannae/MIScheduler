@@ -388,8 +388,9 @@ export default class Winter extends React.Component {
         </div>
         <div className="footer">
           {/* <div>Help</div> */}
-          <div>
-            <p>Made by <a href="https://taamannae.dev/" target="_blank" rel="noreferrer">Tammy</a></p>
+          <div className="footer-content">
+            <p>Last Edit: Aug 20</p>
+            <p>Built by <a href="https://taamannae.dev/" target="_blank" rel="noreferrer">Tammy</a></p>
           </div>
         </div>
       </div>
