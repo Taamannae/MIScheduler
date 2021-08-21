@@ -157,9 +157,12 @@ button {
 .selected-item {
   background-color: #d4eaf8 !important;
     border: 0 !important;
-    border: 2px solid #3380ff !important;
+    /* border: 2px solid #3380ff !important; */
     border-radius: 16px !important;
     box-sizing: border-box;
+    -webkit-box-shadow:inset 0px 0px 0px 2px #3380ff;
+    -moz-box-shadow:inset 0px 0px 0px 2px #3380ff;
+    box-shadow:inset 0px 0px 0px 2px #3380ff !important;
 }
 
 .lec-title {

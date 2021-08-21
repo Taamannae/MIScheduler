@@ -227,10 +227,7 @@ export default class Winter extends React.Component {
 
             let className = ''
             let find = _.find(this.state.schedule, function (o) {
-
-              console.log(o.id, x.course + ':' + x.sessionType );
-              console.log(o.title, `${x.course}: ${x.sessionType} ${x.section} - ${x.method}`);
-              return (o.id === x.course + ':' + x.sessionType && o.title === `${x.course}: ${x.sessionType} ${x.section} - ${x.method}`)
+              return (o.id === x.course + ':' + x.sessionType && o.title === `${x.course}: ${x.sessionType} ${x.section} - ${x.method} ${x.room}`)
             });
 
             console.log(find);
@@ -263,7 +260,7 @@ export default class Winter extends React.Component {
                 let start = `${self.realday(x)}T${self.convertTime(String(startTime, true), true)}`;
                 let end = `${self.realday(x)}T${self.convertTime(String(endTime))}`
 
-                return (o.id === x.course + ':' + x.sessionType && o.title === `${x.course}: ${x.sessionType} ${x.section} - ${x.method}` && o.start === start && o.end === end)
+                return (o.id === x.course + ':' + x.sessionType && o.title === `${x.course}: ${x.sessionType} ${x.section} - ${x.method} ${x.room}` && o.start === start && o.end === end)
 
               });
 
@@ -298,7 +295,7 @@ export default class Winter extends React.Component {
                 let start = `${self.realday(x)}T${self.convertTime(String(startTime, true), true)}`;
                 let end = `${self.realday(x)}T${self.convertTime(String(endTime))}`
 
-                return (o.id === x.course + ':' + x.sessionType && o.title === `${x.course}: ${x.sessionType} ${x.section} - ${x.method}` && o.start === start && o.end === end )
+                return (o.id === x.course + ':' + x.sessionType && o.title === `${x.course}: ${x.sessionType} ${x.section} - ${x.method} ${x.room}` && o.start === start && o.end === end )
 
               });
 
