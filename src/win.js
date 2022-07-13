@@ -3,7 +3,7 @@ export const COURSES = [
             "course": "Course Code",
             "title": "Course Title",
             "subtitle": "Subtitle",
-            "sessionType": "LEC\/PRA\/TUT",
+            "sessionType": "LEC/PRA/TUT",
             "section": "Section",
             "credit": "Credit",
             "required_course_1": "Required Course",

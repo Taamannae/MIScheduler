@@ -212,7 +212,7 @@ h4 {
   margin-top: 0;
   margin-bottom: 0px;
   display: flex;
-  align-items: end;
+  align-items: flex-end;
 }
 
 h4 img {

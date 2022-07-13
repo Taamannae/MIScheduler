@@ -138,7 +138,6 @@ export default class Fall extends React.Component {
   }
 
   addTime = (time) => {
-    let time_2;
     var newSched = _.cloneDeep(this.state.schedule);
 
     let find = _.find(newSched, function (o) {
