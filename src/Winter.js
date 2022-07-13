@@ -401,7 +401,7 @@ export default class Winter extends React.Component {
           <div>
             <div className="nav-bar">
               <img src="./logo.svg" height="25px" alt="logo" />
-              <Button href="/"> Term: Fall</Button>
+              <Button href="/"> Term: Winter</Button>
 
             </div>
             <div className="search">
