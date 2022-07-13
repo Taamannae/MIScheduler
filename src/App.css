@@ -66,7 +66,7 @@
 
 .time-title {
 display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
 }
 
 .App-content {
@@ -212,7 +212,7 @@ h4 {
   margin-top: 0;
   margin-bottom: 0px;
   display: flex;
-  align-items: center;
+  align-items: end;
 }
 
 h4 img {
@@ -269,6 +269,7 @@ line-height: 150%;
 letter-spacing: 0em;
 text-align: left;
 margin: 0;
+grid-column: auto / span 2;
 
 }
 

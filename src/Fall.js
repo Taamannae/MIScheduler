@@ -5,7 +5,8 @@ import dayGridPlugin from '@fullcalendar/daygrid';
 import timeGridPlugin from '@fullcalendar/timegrid';
 import interactionPlugin from '@fullcalendar/interaction';
 import { ReactSearchAutocomplete } from 'react-search-autocomplete'
-import {COURSES} from './sched.js'
+import {COURSES} from './fall-sche.js'
+// import {COURSES} from './sched.js'
 import _ from 'lodash'
 import moment from 'moment';
 import Button from './Button';
@@ -71,6 +72,10 @@ export default class Fall extends React.Component {
     })
   }
 
+  convertTime2023(time) {
+    return moment(time, "hh:mmA").format("HH:mm")
+  }
+
   convertTime(time, startTime) {
     let fullTime;
     if (time.includes(":")) {
@@ -133,35 +138,62 @@ export default class Fall extends React.Component {
   }
 
   addTime = (time) => {
+    let time_2;
     var newSched = _.cloneDeep(this.state.schedule);
 
     let find = _.find(newSched, function (o) {
       return (o.id === time.course + ':' + time.sessionType && o.title.includes(time.sessionType))
 
     });
-    if (time.course === "INF1602H" && time.sessionType === 'LEC') {
-
-    } else if (find) {
-      newSched = newSched.filter( el => el !== find);
-    }
 
     let today = moment();
     let todayDay = today.day();
     let sunday = today.subtract(todayDay, "days");
-    let realday = sunday.add(DAYS[time.day], "days")
+    let realday = sunday.add(DAYS[time.day_1], "days")
     realday = realday.format("YYYY-MM-DD");
 
-    let classTime = time.time.split('-');
-    let startTime = classTime[0]
-    let endTime = classTime[1];
+    let startTime = time.start_time_1
+    let endTime = time.end_time_1
+    let times;
 
-    let times = {
-      id: time.course + ':' + time.sessionType,
-      title: `${time.course}: ${time.sessionType} ${time.section} - ${time.method} ${time.room}`,
-      color: this.state.color,
-      start: `${realday}T${this.convertTime(String(startTime), true)}`,
-      end: `${realday}T${this.convertTime(String(endTime), false)}`,
+   
+    if (time.course === "INF1602H" && time.sessionType === 'LEC') {
+      let realday2 = sunday.add(DAYS[time.day_1], "days")
+      realday2 = realday2.format("YYYY-MM-DD");
+      times = [{
+        id: time.course + ':' + time.sessionType,
+        title: `${time.course}: ${time.sessionType} ${time.section} - ${time.method}`,
+        color: this.state.color,
+        start: `${realday2}T${this.convertTime2023(time.start_time_2)}`,
+        end: `${realday2}T${this.convertTime2023(time.end_time_2)}`,
+      }, {
+        id: time.course + ':' + time.sessionType,
+        title: `${time.course}: ${time.sessionType} ${time.section} - ${time.method}`,
+        color: this.state.color,
+        start: `${realday}T${this.convertTime2023(startTime)}`,
+        end: `${realday}T${this.convertTime2023(endTime)}`,
+      }]
+
+      this.setState({
+        schedule: newSched.concat(times)
+      })
+
+      localStorage.setItem('fallSched', newSched);
+      return
+    
+
+    } else if (find) {
+      newSched = newSched.filter( el => el !== find);
     }
+    
+    times = {
+      id: time.course + ':' + time.sessionType,
+      title: `${time.course}: ${time.sessionType} ${time.section} - ${time.method}`,
+      color: this.state.color,
+      start: `${realday}T${this.convertTime2023(startTime)}`,
+      end: `${realday}T${this.convertTime2023(endTime)}`,
+    }
+
     this.setState({
       schedule: newSched.concat(times)
     })
@@ -174,7 +206,7 @@ export default class Fall extends React.Component {
     let today = moment();
     let todayDay = today.day();
     let sunday = today.subtract(todayDay, "days");
-    let realday = sunday.add(DAYS[x.day], "days")
+    let realday = sunday.add(DAYS[x.day_1], "days")
     return realday.format("YYYY-MM-DD");
   }
 
@@ -192,10 +224,11 @@ export default class Fall extends React.Component {
   }
 
   renderTile = (type, x, className) => {
+
     return (
-      <div class={type + " class-tile " + className } onClick={() => this.addTime(x)}>
+      <div className={type + " class-tile " + className } onClick={() => this.addTime(x)}>
           <div className="time-title">
-            <h3>{x.day} <br/>{x.time}</h3>
+          <h3>{x.day_1} <br />{x.start_time_1}-{x.end_time_1}<br />{x.start_time_2} {x.end_time_2}</h3>
             <h4>{x.sessionType} {x.section} <br /> {x.method}</h4>
           </div>
       </div>
@@ -233,13 +266,12 @@ export default class Fall extends React.Component {
           
             {buttons}</h3>
           {lec.map(x => {
-
+            console.log(this.state.schedule);
             let className = ''
             let find = _.find(this.state.schedule, function (o) {
-
-              console.log(o.id, x.course + ':' + x.sessionType );
-              console.log(o.title, `${x.course}: ${x.sessionType} ${x.section} - ${x.method}`);
-              return (o.id === x.course + ':' + x.sessionType && o.title === `${x.course}: ${x.sessionType} ${x.section} - ${x.method} ${x.room}`)
+              console.log('ppppppppppp',o);
+              console.log('dsjcdsdcs', x.course + ':' + x.sessionType && o.title === `${x.course}: ${x.sessionType} ${x.section} - ${x.method}`);
+              return (o.id === x.course + ':' + x.sessionType && o.title === `${x.course}: ${x.sessionType} ${x.section} - ${x.method}`)
             });
 
             console.log(find);
@@ -265,14 +297,10 @@ export default class Fall extends React.Component {
               let className = ''
 
               let find = _.find(this.state.schedule, function (o) {
-                let classTime = x.time.split('-');
-                let startTime = classTime[0]
-                let endTime = classTime[1]
+                let start = `${self.realday(x)}T${self.convertTime2023(x.start_time_1)}`;
+                let end = `${self.realday(x)}T${self.convertTime2023(x.end_time_1)}`
 
-                let start = `${self.realday(x)}T${self.convertTime(String(startTime, true), true)}`;
-                let end = `${self.realday(x)}T${self.convertTime(String(endTime))}`
-
-                return (o.id === x.course + ':' + x.sessionType && o.title === `${x.course}: ${x.sessionType} ${x.section} - ${x.method} ${x.room}` && o.start === start && o.end === end)
+                return (o.id === x.course + ':' + x.sessionType && o.title === `${x.course}: ${x.sessionType} ${x.section} - ${x.method}` && o.start === start && o.end === end)
 
               });
 
@@ -304,10 +332,10 @@ export default class Fall extends React.Component {
                 let startTime = classTime[0]
                 let endTime = classTime[1]
 
-                let start = `${self.realday(x)}T${self.convertTime(String(startTime, true), true)}`;
-                let end = `${self.realday(x)}T${self.convertTime(String(endTime))}`
+                let start = `${self.realday(x)}T${self.convertTime2023(startTime)}`;
+                let end = `${self.realday(x)}T${self.convertTime2023(endTime)}`
 
-                return (o.id === x.course + ':' + x.sessionType && o.title === `${x.course}: ${x.sessionType} ${x.section} - ${x.method} ${x.room}` && o.start === start && o.end === end )
+                return (o.id === x.course + ':' + x.sessionType && o.title === `${x.course}: ${x.sessionType} ${x.section} - ${x.method}` && o.start === start && o.end === end )
 
               });
 
@@ -342,7 +370,7 @@ export default class Fall extends React.Component {
           <img src="/reading.svg" alt=""/>
           <h2 style={{marginTop: 12}}>Build a</h2>
           <h2 style={{fontWeight: 400, marginBottom: 12}}>Fall Schedule</h2>
-          <p> Use this tool to build your UofT Masters of Information course schedule for Fall 2021. You can build a winter schedule above. <br /> <br /> Search for a course above with the course code or title. Then select lectures, practicums and tutorials.
+          <p> Use this tool to build your UofT Masters of Information course schedule for Fall 2022. You can build a winter schedule above. <br /> <br /> Search for a course above with the course code or title. Then select lectures, practicums and tutorials.
           Once you add a class you can come back and delete it or edit it by searching for the class or clicking on the event in the calendar
           </p>
         </div>
@@ -381,7 +409,7 @@ export default class Fall extends React.Component {
             <div style={{ width: '100%' }}>
               <ReactSearchAutocomplete
                 items={items}
-                placeholder="Search for a fall 2021 class"
+                placeholder="Search for a fall 2022 class"
                 onSearch={this.handleOnSearch}
                 onHover={this.handleOnHover}
                 onSelect={this.handleOnSelect}
@@ -398,7 +426,7 @@ export default class Fall extends React.Component {
         <div className="footer">
           {/* <div>Help</div> */}
           <div className="footer-content">
-            <p>Last Edit: Aug 20</p>
+            <p>Last Edit: Jul 12</p>
             <p>Built by <a href="https://taamannae.dev/" target="_blank" rel="noreferrer">Tammy</a></p>
           </div>
         </div>

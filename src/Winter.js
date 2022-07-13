@@ -5,15 +5,25 @@ import dayGridPlugin from '@fullcalendar/daygrid';
 import timeGridPlugin from '@fullcalendar/timegrid';
 import interactionPlugin from '@fullcalendar/interaction';
 import { ReactSearchAutocomplete } from 'react-search-autocomplete'
-import {COURSES} from './win.js'
+import { COURSES } from './win'
+// import {COURSES} from './sched.js'
 import _ from 'lodash'
 import moment from 'moment';
 import Button from './Button';
 import FeatherIcon from 'feather-icons-react';
 
 
-const DAYS = {Sunday: 0, Monday: 1, Tuesday: 2, Wednesday: 3, Thursday: 4, Friday: 5, Saturday: 6}
+const DAYS = { Sunday: 0, Monday: 1, Tuesday: 2, Wednesday: 3, Thursday: 4, Friday: 5, Saturday: 6 }
 
+// let COLORS = {
+//   0: { bg: '#E4EAFF', text: '#061650', border:'#2B50D2'},
+//   1: { bg: '#FFDBE6', text: '#2A1115', border:'#8B073F'},
+//   2: { bg: '#EDFFE4', text: '#112A27', border:'#3B8C09'},
+//   3: { bg: '#FFF8DB', text: '#3B2805', border:'#F09000'},
+//   4: { bg: '#EBDBFF', text: '#2D053B', border:'#810EC8'},
+//   5: { bg: '#DBFFF6', text: '#03342B', border:'#05827A'},
+//   6: { bg: '#FFEFDB', text: '#3B2805', border:'#C87800'},
+// }
 function isCourse(a, b) {
   return a.course === b.course
 }
@@ -38,7 +48,7 @@ export default class Winter extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      activeCourse: {course: '', sem: ''},
+      activeCourse: { course: '', sem: '' },
       schedule: []
     }
   }
@@ -58,8 +68,12 @@ export default class Winter extends React.Component {
 
   handleOnSelect = (item) => {
     this.setState({
-      activeCourse: {course: item.id, sem: item.semester}
+      activeCourse: { course: item.id, sem: item.semester }
     })
+  }
+
+  convertTime2023(time) {
+    return moment(time, "hh:mmA").format("HH:mm")
   }
 
   convertTime(time, startTime) {
@@ -73,14 +87,14 @@ export default class Winter extends React.Component {
         let timeInt = parseInt(hour);
         fullTime = (timeInt + 12) + ':' + splitMins + ":00"
 
-    } else {
+      } else {
         if (startTime && (hour === '9' || hour === '10' || hour === '11' || hour === '12')) {
           fullTime = time
         } else {
           let timeInt = parseInt(hour) + 12;
-          fullTime = timeInt + ':' + min 
+          fullTime = timeInt + ':' + min
         }
-    }
+      }
 
     } else {
       if (time.includes('pm')) {
@@ -124,40 +138,67 @@ export default class Winter extends React.Component {
   }
 
   addTime = (time) => {
+    let time_2;
     var newSched = _.cloneDeep(this.state.schedule);
 
     let find = _.find(newSched, function (o) {
       return (o.id === time.course + ':' + time.sessionType && o.title.includes(time.sessionType))
 
     });
-    if (time.course === "INF1602H" && time.sessionType === 'LEC') {
-
-    } else if (find) {
-      newSched = newSched.filter( el => el !== find);
-    }
 
     let today = moment();
     let todayDay = today.day();
     let sunday = today.subtract(todayDay, "days");
-    let realday = sunday.add(DAYS[time.day], "days")
+    let realday = sunday.add(DAYS[time.day_1], "days")
     realday = realday.format("YYYY-MM-DD");
 
-    let classTime = time.time.split('-');
-    let startTime = classTime[0]
-    let endTime = classTime[1]
+    let startTime = time.start_time_1
+    let endTime = time.end_time_1
+    let times;
 
-    let times = {
+
+    if (time.course === "INF1602H" && time.sessionType === 'LEC') {
+      let realday2 = sunday.add(DAYS[time.day_1], "days")
+      realday2 = realday2.format("YYYY-MM-DD");
+      times = [{
+        id: time.course + ':' + time.sessionType,
+        title: `${time.course}: ${time.sessionType} ${time.section} - ${time.method}`,
+        color: this.state.color,
+        start: `${realday2}T${this.convertTime2023(time.start_time_2)}`,
+        end: `${realday2}T${this.convertTime2023(time.end_time_2)}`,
+      }, {
+        id: time.course + ':' + time.sessionType,
+        title: `${time.course}: ${time.sessionType} ${time.section} - ${time.method}`,
+        color: this.state.color,
+        start: `${realday}T${this.convertTime2023(startTime)}`,
+        end: `${realday}T${this.convertTime2023(endTime)}`,
+      }]
+
+      this.setState({
+        schedule: newSched.concat(times)
+      })
+
+      localStorage.setItem('winSched', newSched);
+      return
+
+
+    } else if (find) {
+      newSched = newSched.filter(el => el !== find);
+    }
+
+    times = {
       id: time.course + ':' + time.sessionType,
       title: `${time.course}: ${time.sessionType} ${time.section} - ${time.method}`,
       color: this.state.color,
-      start: `${realday}T${this.convertTime(String(startTime), true)}`,
-      end: `${realday}T${this.convertTime(String(endTime), false)}`,
+      start: `${realday}T${this.convertTime2023(startTime)}`,
+      end: `${realday}T${this.convertTime2023(endTime)}`,
     }
+
     this.setState({
       schedule: newSched.concat(times)
     })
 
-    localStorage.setItem('winterSched', newSched);
+    localStorage.setItem('winSched', newSched);
 
   }
 
@@ -165,45 +206,46 @@ export default class Winter extends React.Component {
     let today = moment();
     let todayDay = today.day();
     let sunday = today.subtract(todayDay, "days");
-    let realday = sunday.add(DAYS[x.day], "days")
+    let realday = sunday.add(DAYS[x.day_1], "days")
     return realday.format("YYYY-MM-DD");
   }
 
   handleDelete = (e) => {
     var newSched = _.cloneDeep(this.state.schedule);
-    newSched = _.filter(newSched, function(el) {
+    newSched = _.filter(newSched, function (el) {
       return !el.id.includes(e.course);
     });
 
     this.setState({
       schedule: newSched
     });
-    localStorage.setItem('winterSched', newSched);
+    localStorage.setItem('winSched', newSched);
 
   }
 
   renderTile = (type, x, className) => {
+
     return (
-      <div class={type + " class-tile " + className } onClick={() => this.addTime(x)}>
-          <div className="time-title">
-            <h3>{x.day} <br/>{x.time}</h3>
-            <h4>{x.sessionType} {x.section} <br /> {x.method}</h4>
-          </div>
+      <div className={type + " class-tile " + className} onClick={() => this.addTime(x)}>
+        <div className="time-title">
+          <h3>{x.day_1} <br />{x.start_time_1}-{x.end_time_1}<br />{x.start_time_2} {x.end_time_2}</h3>
+          <h4>{x.sessionType} {x.section} <br /> {x.method}</h4>
+        </div>
       </div>
     )
   }
 
   renderCourseOptions = () => {
-    if (this.state.activeCourse.course !== ''){
+    if (this.state.activeCourse.course !== '') {
       let items = COURSES.filter(x => x.course === this.state.activeCourse.course);
-      
+
       let lec = items.filter(x => x.sessionType === "LEC");
       let pra = items.filter(x => x.sessionType === "PRA");
       let tut = items.filter(x => x.sessionType === "TUT");
 
       let praGroup;
       let tutGroup;
-      let lecGroup; 
+      let lecGroup;
 
       let buttons;
       let self = this
@@ -214,20 +256,22 @@ export default class Winter extends React.Component {
 
       if (findClass) {
         buttons = (
-          <button onClick={(e) => this.handleDelete(self.state.activeCourse)}><FeatherIcon icon="trash" color="#c7364c" size="16px" /> <span style={{marginLeft: '5px'}}>Remove Class</span></button>
+          <button onClick={(e) => this.handleDelete(self.state.activeCourse)}><FeatherIcon icon="trash" color="#c7364c" size="16px" /> <span style={{ marginLeft: '5px' }}>Remove Class</span></button>
         )
       }
-      
+
       lecGroup = (
         <div className="lec-group group-set">
           <h3 className="title lec-title">Add a Lecture
-          
+
             {buttons}</h3>
           {lec.map(x => {
-
+            console.log(this.state.schedule);
             let className = ''
             let find = _.find(this.state.schedule, function (o) {
-              return (o.id === x.course + ':' + x.sessionType && o.title === `${x.course}: ${x.sessionType} ${x.section} - ${x.method} ${x.room}`)
+              console.log('ppppppppppp', o);
+              console.log('dsjcdsdcs', x.course + ':' + x.sessionType && o.title === `${x.course}: ${x.sessionType} ${x.section} - ${x.method}`);
+              return (o.id === x.course + ':' + x.sessionType && o.title === `${x.course}: ${x.sessionType} ${x.section} - ${x.method}`)
             });
 
             console.log(find);
@@ -245,7 +289,7 @@ export default class Winter extends React.Component {
         let self = this
 
         praGroup = (
-          
+
           <div className="pra-group  group-set">
             <h3 className="title">Add a practical</h3>
             {pra.map(x => {
@@ -253,14 +297,10 @@ export default class Winter extends React.Component {
               let className = ''
 
               let find = _.find(this.state.schedule, function (o) {
-                let classTime = x.time.split('-');
-                let startTime = classTime[0]
-                let endTime = classTime[1]
+                let start = `${self.realday(x)}T${self.convertTime2023(x.start_time_1)}`;
+                let end = `${self.realday(x)}T${self.convertTime2023(x.end_time_1)}`
 
-                let start = `${self.realday(x)}T${self.convertTime(String(startTime, true), true)}`;
-                let end = `${self.realday(x)}T${self.convertTime(String(endTime))}`
-
-                return (o.id === x.course + ':' + x.sessionType && o.title === `${x.course}: ${x.sessionType} ${x.section} - ${x.method} ${x.room}` && o.start === start && o.end === end)
+                return (o.id === x.course + ':' + x.sessionType && o.title === `${x.course}: ${x.sessionType} ${x.section} - ${x.method}` && o.start === start && o.end === end)
 
               });
 
@@ -268,11 +308,11 @@ export default class Winter extends React.Component {
                 className = 'selected-item'
               }
 
-          return (
-            this.renderTile("praGroup", x, className)
+              return (
+                this.renderTile("praGroup", x, className)
 
-          )
-          })} </div>)
+              )
+            })} </div>)
 
       }
 
@@ -280,7 +320,7 @@ export default class Winter extends React.Component {
         let self = this
 
         tutGroup = (
-          
+
           <div className="tut-group group-set">
             <h3 className="title">Add a tutorial</h3>
             {tut.map(x => {
@@ -292,46 +332,46 @@ export default class Winter extends React.Component {
                 let startTime = classTime[0]
                 let endTime = classTime[1]
 
-                let start = `${self.realday(x)}T${self.convertTime(String(startTime, true), true)}`;
-                let end = `${self.realday(x)}T${self.convertTime(String(endTime))}`
+                let start = `${self.realday(x)}T${self.convertTime2023(startTime)}`;
+                let end = `${self.realday(x)}T${self.convertTime2023(endTime)}`
 
-                return (o.id === x.course + ':' + x.sessionType && o.title === `${x.course}: ${x.sessionType} ${x.section} - ${x.method} ${x.room}` && o.start === start && o.end === end )
+                return (o.id === x.course + ':' + x.sessionType && o.title === `${x.course}: ${x.sessionType} ${x.section} - ${x.method}` && o.start === start && o.end === end)
 
               });
 
               if (find) {
                 className = 'selected-item'
               }
-          return (
-            this.renderTile("tutGroup", x, className)
-          )
-          })} </div>)
+              return (
+                this.renderTile("tutGroup", x, className)
+              )
+            })} </div>)
 
       }
 
 
-      return(
+      return (
         <div>
           <div className="header-info">
-            
+
 
           </div>
           <div>
 
-          {lecGroup}
-          {tutGroup}
-          {praGroup}
+            {lecGroup}
+            {tutGroup}
+            {praGroup}
           </div>
         </div>
       )
     } else {
       return (
         <div className="welcome">
-          <img src="/reading.svg" alt=""/>
-          <h2 style={{marginTop: 12}}>Build a</h2>
-          <h2 style={{fontWeight: 400, marginBottom: 12}}>Winter Schedule</h2>
-          <p> Use this tool to build your UofT Masters of Information course schedule for Winter 2022. You can build a fall schedule above. <br /> <br /> Search for a course above with the course code or title. Then select lectures, practicums and tutorials.
-          Once you add a class you can come back and delete it or edit it by searching for the class or clicking on the event in the calendar
+          <img src="/reading.svg" alt="" />
+          <h2 style={{ marginTop: 12 }}>Build a</h2>
+          <h2 style={{ fontWeight: 400, marginBottom: 12 }}>Winter Schedule</h2>
+          <p> Use this tool to build your UofT Masters of Information course schedule for Winter 2023. You can build a winter schedule above. <br /> <br /> Search for a course above with the course code or title. Then select lectures, practicums and tutorials.
+            Once you add a class you can come back and delete it or edit it by searching for the class or clicking on the event in the calendar
           </p>
         </div>
       )
@@ -343,7 +383,7 @@ export default class Winter extends React.Component {
     let classId = e.event.id;
     let code = classId.split(':')[0];
     this.setState({
-      activeCourse: {course: code, sem: "F"},
+      activeCourse: { course: code, sem: "F" },
       color: e.event.backgroundColor
     })
 
@@ -356,63 +396,63 @@ export default class Winter extends React.Component {
     // return (<p dangerouslySetInnerHTML={{__html: '<strong>'+item+'</strong>'}}></p>); //To format result as html
   }
   render() {
-  return (
-    <div className="App">
-      <div className="App-header">
-        <div>
-          <div className="nav-bar">
-           <img src="./logo.svg" height="25px" alt="logo"/>
-            <Button href="/"> Term: Winter</Button>
+    return (
+      <div className="App">
+        <div className="App-header">
+          <div>
+            <div className="nav-bar">
+              <img src="./logo.svg" height="25px" alt="logo" />
+              <Button href="/"> Term: Fall</Button>
 
+            </div>
+            <div className="search">
+              <div style={{ width: '100%' }}>
+                <ReactSearchAutocomplete
+                  items={items}
+                  placeholder="Search for a winter 2023 class"
+                  onSearch={this.handleOnSearch}
+                  onHover={this.handleOnHover}
+                  onSelect={this.handleOnSelect}
+                  onFocus={this.handleOnFocus}
+                  autoFocus
+                  formatResult={this.formatResult}
+                />
+              </div>
+            </div>
           </div>
-          <div className="search">
-            <div style={{ width: '100%' }}>
-              <ReactSearchAutocomplete
-                items={items}
-                placeholder="Search for a winter 2022 class"
-                onSearch={this.handleOnSearch}
-                onHover={this.handleOnHover}
-                onSelect={this.handleOnSelect}
-                onFocus={this.handleOnFocus}
-                autoFocus
-                formatResult={this.formatResult}
-              />
+          <div className="App-content">
+            {this.renderCourseOptions()}
+          </div>
+          <div className="footer">
+            {/* <div>Help</div> */}
+            <div className="footer-content">
+              <p>Last Edit: Jul 12</p>
+              <p>Built by <a href="https://taamannae.dev/" target="_blank" rel="noreferrer">Tammy</a></p>
             </div>
           </div>
         </div>
-        <div className="App-content">
-        {this.renderCourseOptions()}
-        </div>
-        <div className="footer">
-          {/* <div>Help</div> */}
-          <div className="footer-content">
-            <p>Last Edit: Aug 20</p>
-            <p>Built by <a href="https://taamannae.dev/" target="_blank" rel="noreferrer">Tammy</a></p>
-          </div>
+        <div className="calendar">
+          <FullCalendar
+            plugins={[dayGridPlugin, timeGridPlugin, interactionPlugin]}
+            initialView="timeGridWeek"
+            height="100%"
+            events={this.state.schedule}
+            expandRows={true}
+            slotMinTime="09:00:00"
+            slotMaxTime="21:30:00"
+            eventClick={this.handleEvent}
+            allDaySlot={false}
+            slotDuration="01:00:00"
+            headerToolbar={{
+              center: '',
+              end: '',
+              title: ''
+
+            }}
+          />
         </div>
       </div>
-<div className="calendar">
-      <FullCalendar
-        plugins={[dayGridPlugin, timeGridPlugin, interactionPlugin]}
-        initialView="timeGridWeek"
-        height="100%"
-        events={this.state.schedule}
-        expandRows={true}
-        slotMinTime="09:00:00"
-        slotMaxTime="21:30:00"
-        eventClick={this.handleEvent}
-        allDaySlot={false}
-        slotDuration="01:00:00"
-        headerToolbar={{
-          center: '',
-          end: '',
-          title: ''
-          
-        }}
-      />
-    </div>
-    </div>
-  );
-      }
+    );
+  }
 }
 
