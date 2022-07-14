@@ -392,7 +392,7 @@ export default class Fall extends React.Component {
     // return item;
     console.log(item);
     return(
-        <div id={item} key={item}>{item}</div>
+        <div id={item.id} key={item.key}>{item.name}</div>
     )
     // return (<p dangerouslySetInnerHTML={{__html: '<strong>'+item+'</strong>'}}></p>); //To format result as html
   }
