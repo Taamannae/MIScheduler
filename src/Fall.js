@@ -389,7 +389,11 @@ export default class Fall extends React.Component {
   }
 
   formatResult = (item) => {
-    return item;
+    // return item;
+    console.log(item);
+    return(
+        <div id={item} key={item}>{item}</div>
+    )
     // return (<p dangerouslySetInnerHTML={{__html: '<strong>'+item+'</strong>'}}></p>); //To format result as html
   }
   render() {
