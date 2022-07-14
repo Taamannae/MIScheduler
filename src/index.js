@@ -17,7 +17,6 @@ ReactDOM.render(
 reportWebVitals();
 
 let items = document.getElementsByClassName('fc-col-header-cell-cushion');
-console.log(items);
 
 for (var item in items) {
   let date = items[item];

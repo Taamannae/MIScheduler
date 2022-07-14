@@ -54,7 +54,7 @@ export default class Fall extends React.Component {
   }
 
 
-  handleOnSearch = (string, results) => {
+  handleOnSearch = () => {
     // onSearch will have as the first callback parameter
     // the string searched and for the second the results.
     this.setState({
@@ -161,12 +161,14 @@ export default class Fall extends React.Component {
       realday2 = realday2.format("YYYY-MM-DD");
       times = [{
         id: time.course + ':' + time.sessionType,
+        key: time.course + ':' + time.sessionType,
         title: `${time.course}: ${time.sessionType} ${time.section} - ${time.method}`,
         color: this.state.color,
         start: `${realday2}T${this.convertTime2023(time.start_time_2)}`,
         end: `${realday2}T${this.convertTime2023(time.end_time_2)}`,
       }, {
         id: time.course + ':' + time.sessionType,
+        key: time.course + ':' + time.sessionType + 1,
         title: `${time.course}: ${time.sessionType} ${time.section} - ${time.method}`,
         color: this.state.color,
         start: `${realday}T${this.convertTime2023(startTime)}`,
@@ -268,12 +270,9 @@ export default class Fall extends React.Component {
             console.log(this.state.schedule);
             let className = ''
             let find = _.find(this.state.schedule, function (o) {
-              console.log('ppppppppppp',o);
-              console.log('dsjcdsdcs', x.course + ':' + x.sessionType && o.title === `${x.course}: ${x.sessionType} ${x.section} - ${x.method}`);
               return (o.id === x.course + ':' + x.sessionType && o.title === `${x.course}: ${x.sessionType} ${x.section} - ${x.method}`)
             });
 
-            console.log(find);
             if (find) {
               className = 'selected-item'
             }
