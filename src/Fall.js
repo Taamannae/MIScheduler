@@ -227,7 +227,7 @@ export default class Fall extends React.Component {
   renderTile = (type, x, className) => {
 
     return (
-      <div className={type + " class-tile " + className } onClick={() => this.addTime(x)}>
+      <div className={type + " class-tile " + className } onClick={() => this.addTime(x)} key={x.course + type}>
           <div className="time-title">
           <h3>{x.day_1} <br />{x.start_time_1}-{x.end_time_1}<br />{x.start_time_2} {x.end_time_2}</h3>
             <h4>{x.sessionType} {x.section} <br /> {x.method}</h4>
@@ -267,7 +267,6 @@ export default class Fall extends React.Component {
           
             {buttons}</h3>
           {lec.map(x => {
-            console.log(this.state.schedule);
             let className = ''
             let find = _.find(this.state.schedule, function (o) {
               return (o.id === x.course + ':' + x.sessionType && o.title === `${x.course}: ${x.sessionType} ${x.section} - ${x.method}`)
