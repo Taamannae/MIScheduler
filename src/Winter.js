@@ -30,7 +30,7 @@ function isCourse(a, b) {
 
 var allCourses = _.uniqWith(COURSES, isCourse);
 const items = allCourses.map(item => {
-  return { id: item.course, name: item.course + ' ' + item.title }
+  return { id: item.course, name: item.course + ' ' + item.title, key: item.course + ' ' + item.title }
 })
 
 function hslToHex(h, s, l) {
@@ -391,7 +391,9 @@ export default class Winter extends React.Component {
   }
 
   formatResult = (item) => {
-    return item;
+    return (
+      <div id={item.id} key={item.key}>{item.name}</div>
+    )
     // return (<p dangerouslySetInnerHTML={{__html: '<strong>'+item+'</strong>'}}></p>); //To format result as html
   }
   render() {
