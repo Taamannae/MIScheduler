@@ -30,7 +30,7 @@ function isCourse(a, b) {
 
 var allCourses = _.uniqWith(COURSES, isCourse);
 const items = allCourses.map(item => {
-  return { id: item.course, name: item.course + ' ' + item.title }
+  return { id: item.course, name: item.course + ' ' + item.title, key: item.course + ' ' + item.title }
 })
 
 function hslToHex(h, s, l) {
