@@ -227,9 +227,8 @@ export default class Fall extends React.Component {
   }
 
   renderTile = (type, x, className) => {
-
     return (
-      <div className={type + " class-tile " + className } onClick={() => this.addTime(x)} key={x.course + type}>
+      <div className={type + " class-tile " + className } onClick={() => this.addTime(x)} key={x.course + type + 'x.section'}>
           <div className="time-title">
           <h3>{x.day_1} <br />{x.start_time_1}-{x.end_time_1}<br />{x.start_time_2} {x.end_time_2}</h3>
             <h4>{x.sessionType} {x.section} <br /> {x.method}</h4>
@@ -241,6 +240,8 @@ export default class Fall extends React.Component {
   renderCourseOptions = () => {
     if (this.state.activeCourse.course !== ''){
       let items = COURSES.filter(x => x.course === this.state.activeCourse.course);
+
+      console.log('items',items);
       
       let lec = items.filter(x => x.sessionType === "LEC");
       let pra = items.filter(x => x.sessionType === "PRA");
