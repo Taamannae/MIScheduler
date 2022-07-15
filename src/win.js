@@ -9,13 +9,14 @@ export const COURSES = [
             "required_course_1": "Required Course",
             "required_course_2": "Required Course",
             "required_course_3": "Required Course",
-            "day_1": "day_1 ",
-            "start_time_1": "Start Time",
+            "day": "day",
+            "time": "Start Time",
             "end_time_1": "End Time",
             "method": "Delivery Method",
             "instructor": "Instructor",
             "instructor_two": "Instructor",
-            "notes": "Notes"
+             "semester": "S",
+             "notes":  "Notes"
         },
         {
             "course": "BKS1002H",
@@ -27,13 +28,13 @@ export const COURSES = [
             "required_course_1": "BHPC collaborative specialization",
             "required_course_2": null,
             "required_course_3": null,
-            "day_1": "Monday",
-            "start_time_1": "2:00pm",
-            "end_time_1": "5:00pm",
+            "day": "Monday",
+            "time": "2-5pm",
             "method": "In-Person",
             "instructor": "TBD",
             "instructor_two": null,
-            "notes": "Course is reserved for BHPC students but non-BHPC students may be able to take it by permission of the instructor"
+             "semester": "S",
+             "notes": "Course is reserved for BHPC students but non-BHPC students may be able to take it by permission of the instructor"
         },
         {
             "course": "INF1003H",
@@ -45,13 +46,13 @@ export const COURSES = [
             "required_course_1": "ARM",
             "required_course_2": "KMIM",
             "required_course_3": "GPO",
-            "day_1": "Monday",
-            "start_time_1": "6:30pm",
-            "end_time_1": "9:30pm",
+            "day": "Monday",
+            "time": "6:30-9:30pm",
             "method": "In-Person",
             "instructor": "Kelly Lyons",
             "instructor_two": null,
-            "notes": null
+             "semester": "S",
+             "notes": null
         },
         {
             "course": "INF1005H",
@@ -63,13 +64,13 @@ export const COURSES = [
             "required_course_1": "ALL concentrations",
             "required_course_2": null,
             "required_course_3": null,
-            "day_1": "Monday",
-            "start_time_1": "9:00am",
-            "end_time_1": "12:00pm",
+            "day": "Monday",
+            "time": "9-12pm",
             "method": "In-Person",
             "instructor": "TBD",
             "instructor_two": null,
-            "notes": "week of January 9, 2023 to week of February 13, 2023"
+             "semester": "S",
+             "notes": "week of January 9, 2023 to week of February 13, 2023"
         },
         {
             "course": "INF1005H",
@@ -81,13 +82,13 @@ export const COURSES = [
             "required_course_1": "ALL concentrations",
             "required_course_2": null,
             "required_course_3": null,
-            "day_1": "Monday",
-            "start_time_1": "10:00am",
-            "end_time_1": "1:00pm",
+            "day": "Monday",
+            "time": "10-1pm",
             "method": "In-Person",
             "instructor": "Maher Elshakankiri",
             "instructor_two": null,
-            "notes": "week of January 9, 2023 to week of February 13, 2023"
+             "semester": "S",
+             "notes": "week of January 9, 2023 to week of February 13, 2023"
         },
         {
             "course": "INF1005H",
@@ -99,13 +100,13 @@ export const COURSES = [
             "required_course_1": "ALL concentrations",
             "required_course_2": null,
             "required_course_3": null,
-            "day_1": "Tuesday_1 ",
-            "start_time_1": "1:00pm",
-            "end_time_1": "4:00pm",
+            "day": "Tuesday ",
+            "time": "1-4pm",
             "method": "In-Person",
             "instructor": "Christoph Becker",
             "instructor_two": null,
-            "notes": "week of January 9, 2023 to week of February 13, 2023"
+             "semester": "S",
+             "notes": "week of January 9, 2023 to week of February 13, 2023"
         },
         {
             "course": "INF1005H",
@@ -117,13 +118,13 @@ export const COURSES = [
             "required_course_1": "ALL concentrations",
             "required_course_2": null,
             "required_course_3": null,
-            "day_1": "Wednesday",
-            "start_time_1": "9:00am",
-            "end_time_1": "12:00pm",
+            "day": "Wednesday",
+            "time": "9-12pm",
             "method": "In-Person",
             "instructor": "Jenna Hartel",
             "instructor_two": null,
-            "notes": "week of January 9, 2023 to week of February 13, 2023"
+             "semester": "S",
+             "notes": "week of January 9, 2023 to week of February 13, 2023"
         },
         {
             "course": "INF1005H",
@@ -135,13 +136,13 @@ export const COURSES = [
             "required_course_1": "ALL concentrations",
             "required_course_2": null,
             "required_course_3": null,
-            "day_1": "Wednesday",
-            "start_time_1": "9:00am",
-            "end_time_1": "12:00pm",
+            "day": "Wednesday",
+            "time": "9-12pm",
             "method": "In-Person",
             "instructor": "Safwat Hassan",
             "instructor_two": null,
-            "notes": "week of January 9, 2023 to week of February 13, 2023"
+             "semester": "S",
+             "notes": "week of January 9, 2023 to week of February 13, 2023"
         },
         {
             "course": "INF1005H",
@@ -153,13 +154,13 @@ export const COURSES = [
             "required_course_1": "ALL concentrations",
             "required_course_2": null,
             "required_course_3": null,
-            "day_1": "Wednesday",
-            "start_time_1": "9:00am",
-            "end_time_1": "12:00pm",
+            "day": "Wednesday",
+            "time": "9-12pm",
             "method": "In-Person",
             "instructor": "TBD",
             "instructor_two": null,
-            "notes": "week of January 9, 2023 to week of February 13, 2023"
+             "semester": "S",
+             "notes": "week of January 9, 2023 to week of February 13, 2023"
         },
         {
             "course": "INF1005H",
@@ -171,13 +172,13 @@ export const COURSES = [
             "required_course_1": "ALL concentrations",
             "required_course_2": null,
             "required_course_3": null,
-            "day_1": "Wednesday",
-            "start_time_1": "1:00pm",
-            "end_time_1": "3:30pm",
+            "day": "Wednesday",
+            "time": "1-3:30pm",
             "method": "In-Person",
             "instructor": "SA Smythe",
             "instructor_two": null,
-            "notes": "week of January 9, 2023 to week of February 13, 2023"
+             "semester": "S",
+             "notes": "week of January 9, 2023 to week of February 13, 2023"
         },
         {
             "course": "INF1005H",
@@ -189,13 +190,13 @@ export const COURSES = [
             "required_course_1": "ALL concentrations",
             "required_course_2": null,
             "required_course_3": null,
-            "day_1": "Wednesday",
-            "start_time_1": "6:30pm",
-            "end_time_1": "9:30pm",
+            "day": "Wednesday",
+            "time": "6:30-9:30pm",
             "method": "In-Person",
             "instructor": "TBD",
             "instructor_two": null,
-            "notes": "week of January 9, 2023 to week of February 13, 2023"
+             "semester": "S",
+             "notes": "week of January 9, 2023 to week of February 13, 2023"
         },
         {
             "course": "INF1005H",
@@ -207,13 +208,13 @@ export const COURSES = [
             "required_course_1": "ALL concentrations",
             "required_course_2": null,
             "required_course_3": null,
-            "day_1": "Wednesday",
-            "start_time_1": "6:30pm",
-            "end_time_1": "9:30pm",
+            "day": "Wednesday",
+            "time": "6:30-9:30pm",
             "method": "In-Person",
             "instructor": "TBD",
             "instructor_two": null,
-            "notes": "week of January 9, 2023 to week of February 13, 2023"
+             "semester": "S",
+             "notes": "week of January 9, 2023 to week of February 13, 2023"
         },
         {
             "course": "INF1005H",
@@ -225,13 +226,13 @@ export const COURSES = [
             "required_course_1": "ALL concentrations",
             "required_course_2": null,
             "required_course_3": null,
-            "day_1": "Thursday",
-            "start_time_1": "1:00pm",
-            "end_time_1": "4:00pm",
+            "day": "Thursday",
+            "time": "1-4pm",
             "method": "In-Person",
             "instructor": "TBD",
             "instructor_two": null,
-            "notes": "week of January 9, 2023 to week of February 13, 2023"
+             "semester": "S",
+             "notes": "week of January 9, 2023 to week of February 13, 2023"
         },
         {
             "course": "INF1005H",
@@ -243,13 +244,13 @@ export const COURSES = [
             "required_course_1": "ALL concentrations",
             "required_course_2": null,
             "required_course_3": null,
-            "day_1": "Thursday",
-            "start_time_1": "1:00pm",
-            "end_time_1": "4:00pm",
+            "day": "Thursday",
+            "time": "1-4pm",
             "method": "In-Person",
             "instructor": "TBD",
             "instructor_two": "TBD",
-            "notes": "week of January 9, 2023 to week of February 13, 2023"
+             "semester": "S",
+             "notes": "week of January 9, 2023 to week of February 13, 2023"
         },
         {
             "course": "INF1005H",
@@ -261,13 +262,13 @@ export const COURSES = [
             "required_course_1": "ALL concentrations",
             "required_course_2": null,
             "required_course_3": null,
-            "day_1": "Thursday",
-            "start_time_1": "4:00pm",
-            "end_time_1": "6:30pm",
+            "day": "Thursday",
+            "time": "4-6:30pm",
             "method": "In-Person",
             "instructor": "TBD",
             "instructor_two": null,
-            "notes": "week of January 9, 2023 to week of February 13, 2023"
+             "semester": "S",
+             "notes": "week of January 9, 2023 to week of February 13, 2023"
         },
         {
             "course": "INF1005H",
@@ -279,13 +280,13 @@ export const COURSES = [
             "required_course_1": "ALL concentrations",
             "required_course_2": null,
             "required_course_3": null,
-            "day_1": "Thursday",
-            "start_time_1": "6:30pm",
-            "end_time_1": "9:30pm",
+            "day": "Thursday",
+            "time": "6:30-9:30pm",
             "method": "In-Person",
             "instructor": "TBD",
             "instructor_two": null,
-            "notes": "week of January 9, 2023 to week of February 13, 2023"
+             "semester": "S",
+             "notes": "week of January 9, 2023 to week of February 13, 2023"
         },
         {
             "course": "INF1005H",
@@ -297,13 +298,13 @@ export const COURSES = [
             "required_course_1": "ALL concentrations",
             "required_course_2": null,
             "required_course_3": null,
-            "day_1": "Thursday",
-            "start_time_1": "6:30pm",
-            "end_time_1": "9:30pm",
+            "day": "Thursday",
+            "time": "6:30-9:30pm",
             "method": "In-Person",
             "instructor": "TBD",
             "instructor_two": null,
-            "notes": "week of January 9, 2023 to week of February 13, 2023"
+             "semester": "S",
+             "notes": "week of January 9, 2023 to week of February 13, 2023"
         },
         {
             "course": "INF1005H",
@@ -315,13 +316,13 @@ export const COURSES = [
             "required_course_1": "ALL concentrations",
             "required_course_2": null,
             "required_course_3": null,
-            "day_1": "Friday",
-            "start_time_1": "1:00pm",
-            "end_time_1": "4:00pm",
+            "day": "Friday",
+            "time": "1-4pm",
             "method": "In-Person",
             "instructor": "TBD",
             "instructor_two": null,
-            "notes": "week of January 9, 2023 to week of February 13, 2023"
+             "semester": "S",
+             "notes": "week of January 9, 2023 to week of February 13, 2023"
         },
         {
             "course": "INF1005H",
@@ -333,13 +334,13 @@ export const COURSES = [
             "required_course_1": "ALL concentrations",
             "required_course_2": null,
             "required_course_3": null,
-            "day_1": "Tuesday_1 ",
-            "start_time_1": "1:00pm",
-            "end_time_1": "4:00pm",
+            "day": "Tuesday ",
+            "time": "1-4pm",
             "method": "In-Person",
             "instructor": "Wendy Duff",
             "instructor_two": null,
-            "notes": "week of January 9, 2023 to week of February 13, 2023"
+             "semester": "S",
+             "notes": "week of January 9, 2023 to week of February 13, 2023"
         },
         {
             "course": "INF1005H",
@@ -351,13 +352,13 @@ export const COURSES = [
             "required_course_1": "ALL concentrations",
             "required_course_2": null,
             "required_course_3": null,
-            "day_1": "Tuesday_1 ",
-            "start_time_1": "6:30pm",
-            "end_time_1": "9:30pm",
+            "day": "Tuesday ",
+            "time": "6:30-9:30pm",
             "method": "In-Person",
             "instructor": "TBD",
             "instructor_two": null,
-            "notes": "week of January 9, 2023 to week of February 13, 2023"
+             "semester": "S",
+             "notes": "week of January 9, 2023 to week of February 13, 2023"
         },
         {
             "course": "INF1005H",
@@ -369,13 +370,13 @@ export const COURSES = [
             "required_course_1": "ALL concentrations",
             "required_course_2": null,
             "required_course_3": null,
-            "day_1": "Thursday",
-            "start_time_1": "6:30pm",
-            "end_time_1": "9:30pm",
+            "day": "Thursday",
+            "time": "6:30-9:30pm",
             "method": "In-Person",
             "instructor": "TBD",
             "instructor_two": null,
-            "notes": "week of January 9, 2023 to week of February 13, 2023"
+             "semester": "S",
+             "notes": "week of January 9, 2023 to week of February 13, 2023"
         },
         {
             "course": "INF1006H",
@@ -387,13 +388,13 @@ export const COURSES = [
             "required_course_1": "ALL concentrations",
             "required_course_2": null,
             "required_course_3": null,
-            "day_1": "Monday",
-            "start_time_1": "9:00am",
-            "end_time_1": "12:00pm",
+            "day": "Monday",
+            "time": "9-12pm",
             "method": "In-Person",
             "instructor": "TBD",
             "instructor_two": null,
-            "notes": "week of February 27, 2023 to week of April 3, 2023"
+             "semester": "S",
+             "notes": "week of February 27, 2023 to week of April 3, 2023"
         },
         {
             "course": "INF1006H",
@@ -405,13 +406,13 @@ export const COURSES = [
             "required_course_1": "ALL concentrations",
             "required_course_2": null,
             "required_course_3": null,
-            "day_1": "Monday",
-            "start_time_1": "10:00am",
-            "end_time_1": "1:00pm",
+            "day": "Monday",
+            "time": "10-1pm",
             "method": "In-Person",
             "instructor": "Maher Elshakankiri",
             "instructor_two": null,
-            "notes": "week of February 27, 2023 to week of April 3, 2023"
+             "semester": "S",
+             "notes": "week of February 27, 2023 to week of April 3, 2023"
         },
         {
             "course": "INF1006H",
@@ -423,13 +424,13 @@ export const COURSES = [
             "required_course_1": "ALL concentrations",
             "required_course_2": null,
             "required_course_3": null,
-            "day_1": "Tuesday_1 ",
-            "start_time_1": "1:00pm",
-            "end_time_1": "4:00pm",
+            "day": "Tuesday ",
+            "time": "1-4pm",
             "method": "In-Person",
             "instructor": "Christoph Becker",
             "instructor_two": null,
-            "notes": "week of February 27, 2023 to week of April 3, 2023"
+             "semester": "S",
+             "notes": "week of February 27, 2023 to week of April 3, 2023"
         },
         {
             "course": "INF1006H",
@@ -441,13 +442,13 @@ export const COURSES = [
             "required_course_1": "ALL concentrations",
             "required_course_2": null,
             "required_course_3": null,
-            "day_1": "Wednesday",
-            "start_time_1": "9:00am",
-            "end_time_1": "12:00pm",
+            "day": "Wednesday",
+            "time": "9-12pm",
             "method": "In-Person",
             "instructor": "Jenna Hartel",
             "instructor_two": null,
-            "notes": "week of February 27, 2023 to week of April 3, 2023"
+             "semester": "S",
+             "notes": "week of February 27, 2023 to week of April 3, 2023"
         },
         {
             "course": "INF1006H",
@@ -459,13 +460,13 @@ export const COURSES = [
             "required_course_1": "ALL concentrations",
             "required_course_2": null,
             "required_course_3": null,
-            "day_1": "Wednesday",
-            "start_time_1": "9:00am",
-            "end_time_1": "12:00pm",
+            "day": "Wednesday",
+            "time": "9-12pm",
             "method": "In-Person",
             "instructor": "Safwat Hassan",
             "instructor_two": null,
-            "notes": "week of February 27, 2023 to week of April 3, 2023"
+             "semester": "S",
+             "notes": "week of February 27, 2023 to week of April 3, 2023"
         },
         {
             "course": "INF1006H",
@@ -477,13 +478,13 @@ export const COURSES = [
             "required_course_1": "ALL concentrations",
             "required_course_2": null,
             "required_course_3": null,
-            "day_1": "Wednesday",
-            "start_time_1": "9:00am",
-            "end_time_1": "12:00pm",
+            "day": "Wednesday",
+            "time": "9-12pm",
             "method": "In-Person",
             "instructor": "TBD",
             "instructor_two": null,
-            "notes": "week of February 27, 2023 to week of April 3, 2023"
+             "semester": "S",
+             "notes": "week of February 27, 2023 to week of April 3, 2023"
         },
         {
             "course": "INF1006H",
@@ -495,13 +496,13 @@ export const COURSES = [
             "required_course_1": "ALL concentrations",
             "required_course_2": null,
             "required_course_3": null,
-            "day_1": "Wednesday",
-            "start_time_1": "1:00pm",
-            "end_time_1": "3:30pm",
+            "day": "Wednesday",
+            "time": "1-3:30pm",
             "method": "In-Person",
             "instructor": "SA Smythe",
             "instructor_two": null,
-            "notes": "week of February 27, 2023 to week of April 3, 2023"
+             "semester": "S",
+             "notes": "week of February 27, 2023 to week of April 3, 2023"
         },
         {
             "course": "INF1006H",
@@ -513,13 +514,13 @@ export const COURSES = [
             "required_course_1": "ALL concentrations",
             "required_course_2": null,
             "required_course_3": null,
-            "day_1": "Wednesday",
-            "start_time_1": "6:30pm",
-            "end_time_1": "9:30pm",
+            "day": "Wednesday",
+            "time": "6:30-9:30pm",
             "method": "In-Person",
             "instructor": "TBD",
             "instructor_two": null,
-            "notes": "week of February 27, 2023 to week of April 3, 2023"
+             "semester": "S",
+             "notes": "week of February 27, 2023 to week of April 3, 2023"
         },
         {
             "course": "INF1006H",
@@ -531,13 +532,13 @@ export const COURSES = [
             "required_course_1": "ALL concentrations",
             "required_course_2": null,
             "required_course_3": null,
-            "day_1": "Wednesday",
-            "start_time_1": "6:30pm",
-            "end_time_1": "9:30pm",
+            "day": "Wednesday",
+            "time": "6:30-9:30pm",
             "method": "In-Person",
             "instructor": "TBD",
             "instructor_two": null,
-            "notes": "week of February 27, 2023 to week of April 3, 2023"
+             "semester": "S",
+             "notes": "week of February 27, 2023 to week of April 3, 2023"
         },
         {
             "course": "INF1006H",
@@ -549,13 +550,13 @@ export const COURSES = [
             "required_course_1": "ALL concentrations",
             "required_course_2": null,
             "required_course_3": null,
-            "day_1": "Thursday",
-            "start_time_1": "1:00pm",
-            "end_time_1": "4:00pm",
+            "day": "Thursday",
+            "time": "1-4pm",
             "method": "In-Person",
             "instructor": "TBD",
             "instructor_two": null,
-            "notes": "week of February 27, 2023 to week of April 3, 2023"
+             "semester": "S",
+             "notes": "week of February 27, 2023 to week of April 3, 2023"
         },
         {
             "course": "INF1006H",
@@ -567,13 +568,13 @@ export const COURSES = [
             "required_course_1": "ALL concentrations",
             "required_course_2": null,
             "required_course_3": null,
-            "day_1": "Thursday",
-            "start_time_1": "1:00pm",
-            "end_time_1": "4:00pm",
+            "day": "Thursday",
+            "time": "1-4pm",
             "method": "In-Person",
             "instructor": "TBD",
             "instructor_two": "TBD",
-            "notes": "week of February 27, 2023 to week of April 3, 2023"
+             "semester": "S",
+             "notes": "week of February 27, 2023 to week of April 3, 2023"
         },
         {
             "course": "INF1006H",
@@ -585,13 +586,13 @@ export const COURSES = [
             "required_course_1": "ALL concentrations",
             "required_course_2": null,
             "required_course_3": null,
-            "day_1": "Thursday",
-            "start_time_1": "4:00pm",
-            "end_time_1": "6:30pm",
+            "day": "Thursday",
+            "time": "4-6:30pm",
             "method": "In-Person",
             "instructor": "TBD",
             "instructor_two": null,
-            "notes": "week of February 27, 2023 to week of April 3, 2023"
+             "semester": "S",
+             "notes": "week of February 27, 2023 to week of April 3, 2023"
         },
         {
             "course": "INF1006H",
@@ -603,13 +604,13 @@ export const COURSES = [
             "required_course_1": "ALL concentrations",
             "required_course_2": null,
             "required_course_3": null,
-            "day_1": "Thursday",
-            "start_time_1": "6:30pm",
-            "end_time_1": "9:30pm",
+            "day": "Thursday",
+            "time": "6:30-9:30pm",
             "method": "In-Person",
             "instructor": "TBD",
             "instructor_two": null,
-            "notes": "week of February 27, 2023 to week of April 3, 2023"
+             "semester": "S",
+             "notes": "week of February 27, 2023 to week of April 3, 2023"
         },
         {
             "course": "INF1006H",
@@ -621,13 +622,13 @@ export const COURSES = [
             "required_course_1": "ALL concentrations",
             "required_course_2": null,
             "required_course_3": null,
-            "day_1": "Thursday",
-            "start_time_1": "6:30pm",
-            "end_time_1": "9:30pm",
+            "day": "Thursday",
+            "time": "6:30-9:30pm",
             "method": "In-Person",
             "instructor": "TBD",
             "instructor_two": null,
-            "notes": "week of February 27, 2023 to week of April 3, 2023"
+             "semester": "S",
+             "notes": "week of February 27, 2023 to week of April 3, 2023"
         },
         {
             "course": "INF1006H",
@@ -639,13 +640,13 @@ export const COURSES = [
             "required_course_1": "ALL concentrations",
             "required_course_2": null,
             "required_course_3": null,
-            "day_1": "Friday",
-            "start_time_1": "1:00pm",
-            "end_time_1": "4:00pm",
+            "day": "Friday",
+            "time": "1-4pm",
             "method": "In-Person",
             "instructor": "TBD",
             "instructor_two": null,
-            "notes": "week of February 27, 2023 to week of April 3, 2023"
+             "semester": "S",
+             "notes": "week of February 27, 2023 to week of April 3, 2023"
         },
         {
             "course": "INF1006H",
@@ -657,13 +658,13 @@ export const COURSES = [
             "required_course_1": "ALL concentrations",
             "required_course_2": null,
             "required_course_3": null,
-            "day_1": "Tuesday_1 ",
-            "start_time_1": "1:00pm",
-            "end_time_1": "4:00pm",
+            "day": "Tuesday ",
+            "time": "1-4pm",
             "method": "In-Person",
             "instructor": "Wendy Duff",
             "instructor_two": null,
-            "notes": "week of February 27, 2023 to week of April 3, 2023"
+             "semester": "S",
+             "notes": "week of February 27, 2023 to week of April 3, 2023"
         },
         {
             "course": "INF1006H",
@@ -675,13 +676,13 @@ export const COURSES = [
             "required_course_1": "ALL concentrations",
             "required_course_2": null,
             "required_course_3": null,
-            "day_1": "Tuesday_1 ",
-            "start_time_1": "6:30pm",
-            "end_time_1": "9:30pm",
+            "day": "Tuesday ",
+            "time": "6:30-9:30pm",
             "method": "In-Person",
             "instructor": "TBD",
             "instructor_two": null,
-            "notes": "week of February 27, 2023 to week of April 3, 2023"
+             "semester": "S",
+             "notes": "week of February 27, 2023 to week of April 3, 2023"
         },
         {
             "course": "INF1006H",
@@ -693,13 +694,13 @@ export const COURSES = [
             "required_course_1": "ALL concentrations",
             "required_course_2": null,
             "required_course_3": null,
-            "day_1": "Thursday",
-            "start_time_1": "6:39pm",
-            "end_time_1": "9:30pm",
+            "day": "Thursday",
+            "time": "6:39-9:30pm",
             "method": "In-Person",
             "instructor": "TBD",
             "instructor_two": null,
-            "notes": "week of February 27, 2023 to week of April 3, 2023"
+             "semester": "S",
+             "notes": "week of February 27, 2023 to week of April 3, 2023"
         },
         {
             "course": "INF1230H",
@@ -711,13 +712,13 @@ export const COURSES = [
             "required_course_1": "KMIM",
             "required_course_2": null,
             "required_course_3": null,
-            "day_1": "Friday",
-            "start_time_1": "9:00am",
-            "end_time_1": "12:00pm",
+            "day": "Friday",
+            "time": "9-12pm",
             "method": "In-Person",
             "instructor": "Victoria Owen",
             "instructor_two": null,
-            "notes": null
+             "semester": "S",
+             "notes": null
         },
         {
             "course": "INF1240H",
@@ -729,13 +730,13 @@ export const COURSES = [
             "required_course_1": "THESIS",
             "required_course_2": "GPO",
             "required_course_3": null,
-            "day_1": "Tuesday_1 ",
-            "start_time_1": "1:00pm",
-            "end_time_1": "4:00pm",
+            "day": "Tuesday ",
+            "time": "1-4pm",
             "method": "In-Person",
             "instructor": "Malayna Bernstein",
             "instructor_two": null,
-            "notes": null
+             "semester": "S",
+             "notes": null
         },
         {
             "course": "INF1322H",
@@ -747,13 +748,13 @@ export const COURSES = [
             "required_course_1": "LIS",
             "required_course_2": null,
             "required_course_3": null,
-            "day_1": "Tuesday_1 ",
-            "start_time_1": "1:00pm",
-            "end_time_1": "4:00pm",
+            "day": "Tuesday ",
+            "time": "1-4pm",
             "method": "In-Person",
             "instructor": "Nadia Caidi",
             "instructor_two": null,
-            "notes": null
+             "semester": "S",
+             "notes": null
         },
         {
             "course": "INF1322H",
@@ -765,13 +766,13 @@ export const COURSES = [
             "required_course_1": "LIS",
             "required_course_2": null,
             "required_course_3": null,
-            "day_1": "Thursday_1 ",
-            "start_time_1": "6:30pm",
-            "end_time_1": "9:30pm",
+            "day": "Thursday ",
+            "time": "6:30-9:30pm",
             "method": "In-Person",
             "instructor": "Nadia Caidi",
             "instructor_two": null,
-            "notes": null
+             "semester": "S",
+             "notes": null
         },
         {
             "course": "INF1324H",
@@ -783,13 +784,13 @@ export const COURSES = [
             "required_course_1": "LIS",
             "required_course_2": null,
             "required_course_3": null,
-            "day_1": "Tuesday_1 ",
-            "start_time_1": "6:30pm",
-            "end_time_1": "9:30pm",
+            "day": "Tuesday ",
+            "time": "6:30-9:30pm",
             "method": "In-Person",
             "instructor": "Siobhan Stevenson",
             "instructor_two": null,
-            "notes": null
+             "semester": "S",
+             "notes": null
         },
         {
             "course": "INF1324H",
@@ -801,13 +802,13 @@ export const COURSES = [
             "required_course_1": "LIS",
             "required_course_2": null,
             "required_course_3": null,
-            "day_1": "Wednesday",
-            "start_time_1": "1:00pm",
-            "end_time_1": "4:00pm",
+            "day": "Wednesday",
+            "time": "1-4pm",
             "method": "In-Person",
             "instructor": "Siobhan Stevenson",
             "instructor_two": null,
-            "notes": null
+             "semester": "S",
+             "notes": null
         },
         {
             "course": "INF1331H",
@@ -819,13 +820,13 @@ export const COURSES = [
             "required_course_1": "ARM",
             "required_course_2": null,
             "required_course_3": null,
-            "day_1": "Wednesday",
-            "start_time_1": "6:30pm",
-            "end_time_1": "9:30pm",
+            "day": "Wednesday",
+            "time": "6:30-9:30pm",
             "method": "In-Person",
             "instructor": "TBD",
             "instructor_two": null,
-            "notes": null
+             "semester": "S",
+             "notes": null
         },
         {
             "course": "INF1342H",
@@ -837,13 +838,13 @@ export const COURSES = [
             "required_course_1": "ISD",
             "required_course_2": null,
             "required_course_3": null,
-            "day_1": "Monday",
-            "start_time_1": "1:00pm",
-            "end_time_1": "4:00pm",
+            "day": "Monday",
+            "time": "1-4pm",
             "method": "In-Person",
             "instructor": "Christoph Becker",
             "instructor_two": null,
-            "notes": null
+             "semester": "S",
+             "notes": null
         },
         {
             "course": "INF1342H",
@@ -855,13 +856,13 @@ export const COURSES = [
             "required_course_1": "ISD",
             "required_course_2": null,
             "required_course_3": null,
-            "day_1": "Wednesday",
-            "start_time_1": "1:00pm",
-            "end_time_1": "4:00pm",
+            "day": "Wednesday",
+            "time": "1-4pm",
             "method": "In-Person",
             "instructor": "Christoph Becker",
             "instructor_two": null,
-            "notes": null
+             "semester": "S",
+             "notes": null
         },
         {
             "course": "INF1343H",
@@ -873,13 +874,13 @@ export const COURSES = [
             "required_course_1": "ISD",
             "required_course_2": null,
             "required_course_3": null,
-            "day_1": "Thursday",
-            "start_time_1": "10:00am",
-            "end_time_1": "1:00pm",
+            "day": "Thursday",
+            "time": "10-1pm",
             "method": "In-Person",
             "instructor": "Maher Elshakankiri",
             "instructor_two": null,
-            "notes": null
+             "semester": "S",
+             "notes": null
         },
         {
             "course": "INF1343H",
@@ -891,13 +892,13 @@ export const COURSES = [
             "required_course_1": "ISD",
             "required_course_2": null,
             "required_course_3": null,
-            "day_1": "Thursday",
-            "start_time_1": "2:00pm",
-            "end_time_1": "5:00pm",
+            "day": "Thursday",
+            "time": "2-5pm",
             "method": "In-Person",
             "instructor": "Maher Elshakankiri",
             "instructor_two": null,
-            "notes": null
+             "semester": "S",
+             "notes": null
         },
         {
             "course": "INF1502H",
@@ -909,13 +910,13 @@ export const COURSES = [
             "required_course_1": "C&T",
             "required_course_2": null,
             "required_course_3": null,
-            "day_1": "Monday",
-            "start_time_1": "9:00am",
-            "end_time_1": "12:00pm",
+            "day": "Monday",
+            "time": "9-12pm",
             "method": "In-Person",
             "instructor": "Matt Ratto",
             "instructor_two": null,
-            "notes": "2nd year MI students only"
+             "semester": "S",
+             "notes": "2nd year MI students only"
         },
         {
             "course": "INF2040H",
@@ -927,13 +928,13 @@ export const COURSES = [
             "required_course_1": null,
             "required_course_2": null,
             "required_course_3": null,
-            "day_1": "Friday",
-            "start_time_1": "9:00am",
-            "end_time_1": "12:00pm",
+            "day": "Friday",
+            "time": "9-12pm",
             "method": "In-Person",
             "instructor": "TBD",
             "instructor_two": null,
-            "notes": null
+             "semester": "S",
+             "notes": null
         },
         {
             "course": "INF2040H",
@@ -945,13 +946,13 @@ export const COURSES = [
             "required_course_1": null,
             "required_course_2": null,
             "required_course_3": null,
-            "day_1": "Tuesday_1 ",
-            "start_time_1": "6:30pm",
-            "end_time_1": "9:30pm",
+            "day": "Tuesday ",
+            "time": "6:30-9:30pm",
             "method": "In-Person",
             "instructor": "TBD",
             "instructor_two": null,
-            "notes": null
+             "semester": "S",
+             "notes": null
         },
         {
             "course": "INF2120H",
@@ -963,13 +964,13 @@ export const COURSES = [
             "required_course_1": null,
             "required_course_2": null,
             "required_course_3": null,
-            "day_1": "Monday",
-            "start_time_1": "6:30pm",
-            "end_time_1": "9:30pm",
+            "day": "Monday",
+            "time": "6:30-9:30pm",
             "method": "In-Person",
             "instructor": "TBD",
             "instructor_two": null,
-            "notes": null
+             "semester": "S",
+             "notes": null
         },
         {
             "course": "INF2121H",
@@ -981,13 +982,13 @@ export const COURSES = [
             "required_course_1": null,
             "required_course_2": null,
             "required_course_3": null,
-            "day_1": "Tuesday_1 ",
-            "start_time_1": "6:30pm",
-            "end_time_1": "9:30pm",
+            "day": "Tuesday ",
+            "time": "6:30-9:30pm",
             "method": "In-Person",
             "instructor": "SA Smythe",
             "instructor_two": null,
-            "notes": null
+             "semester": "S",
+             "notes": null
         },
         {
             "course": "INF2127H",
@@ -999,13 +1000,13 @@ export const COURSES = [
             "required_course_1": null,
             "required_course_2": null,
             "required_course_3": null,
-            "day_1": "Wednesday",
-            "start_time_1": "6:30pm",
-            "end_time_1": "9:30pm",
+            "day": "Wednesday",
+            "time": "6:30-9:30pm",
             "method": "In-Person",
             "instructor": "TBD",
             "instructor_two": null,
-            "notes": null
+             "semester": "S",
+             "notes": null
         },
         {
             "course": "INF2141H",
@@ -1017,13 +1018,13 @@ export const COURSES = [
             "required_course_1": null,
             "required_course_2": null,
             "required_course_3": null,
-            "day_1": "Wednesday",
-            "start_time_1": "2:00pm",
-            "end_time_1": "5:00pm",
+            "day": "Wednesday",
+            "time": "2-5pm",
             "method": "In-Person",
             "instructor": "Sara Grimes",
             "instructor_two": " ",
-            "notes": null
+             "semester": "S",
+             "notes": null
         },
         {
             "course": "INF2145H",
@@ -1035,13 +1036,13 @@ export const COURSES = [
             "required_course_1": null,
             "required_course_2": null,
             "required_course_3": null,
-            "day_1": "Monday",
-            "start_time_1": "6:30pm",
-            "end_time_1": "9:30pm",
+            "day": "Monday",
+            "time": "6:30-9:30pm",
             "method": "In-Person",
             "instructor": "TBD",
             "instructor_two": null,
-            "notes": null
+             "semester": "S",
+             "notes": null
         },
         {
             "course": "INF2162H",
@@ -1053,13 +1054,13 @@ export const COURSES = [
             "required_course_1": null,
             "required_course_2": null,
             "required_course_3": null,
-            "day_1": "Thursday",
-            "start_time_1": "1:00pm",
-            "end_time_1": "4:00pm",
+            "day": "Thursday",
+            "time": "1-4pm",
             "method": "In-Person",
             "instructor": "TBD",
             "instructor_two": null,
-            "notes": "2nd+ year students only"
+             "semester": "S",
+             "notes": "2nd+ year students only"
         },
         {
             "course": "INF2164H",
@@ -1071,13 +1072,13 @@ export const COURSES = [
             "required_course_1": null,
             "required_course_2": null,
             "required_course_3": null,
-            "day_1": "Friday",
-            "start_time_1": "1:00pm",
-            "end_time_1": "4:00pm",
+            "day": "Friday",
+            "time": "1-4pm",
             "method": "In-Person",
             "instructor": "Velian Pandeliev",
             "instructor_two": null,
-            "notes": null
+             "semester": "S",
+             "notes": null
         },
         {
             "course": "INF2169H",
@@ -1089,13 +1090,13 @@ export const COURSES = [
             "required_course_1": "UXD",
             "required_course_2": null,
             "required_course_3": null,
-            "day_1": "Monday",
-            "start_time_1": "11:00am",
-            "end_time_1": "1:00pm",
+            "day": "Monday",
+            "time": "11-1pm",
             "method": "In-Person",
             "instructor": "Anastasia Kuzminykh",
             "instructor_two": null,
-            "notes": null
+             "semester": "S",
+             "notes": null
         },
         {
             "course": "INF2169H",
@@ -1107,13 +1108,13 @@ export const COURSES = [
             "required_course_1": "UXD",
             "required_course_2": null,
             "required_course_3": null,
-            "day_1": "Monday",
-            "start_time_1": "4:00pm",
-            "end_time_1": "5:00pm",
+            "day": "Monday",
+            "time": "4-5pm",
             "method": "In-Person",
             "instructor": "Anastasia Kuzminykh",
             "instructor_two": null,
-            "notes": null
+             "semester": "S",
+             "notes": null
         },
         {
             "course": "INF2169H",
@@ -1125,13 +1126,13 @@ export const COURSES = [
             "required_course_1": "UXD",
             "required_course_2": null,
             "required_course_3": null,
-            "day_1": "Monday",
-            "start_time_1": "5:15pm",
-            "end_time_1": "6:15pm",
+            "day": "Monday",
+            "time": "5:15-6:15pm",
             "method": "In-Person",
             "instructor": "Anastasia Kuzminykh",
             "instructor_two": null,
-            "notes": null
+             "semester": "S",
+             "notes": null
         },
         {
             "course": "INF2169H",
@@ -1143,13 +1144,13 @@ export const COURSES = [
             "required_course_1": "UXD",
             "required_course_2": null,
             "required_course_3": null,
-            "day_1": "Tuesday_1 ",
-            "start_time_1": "4:00pm",
-            "end_time_1": "5:00pm",
+            "day": "Tuesday ",
+            "time": "4-5pm",
             "method": "In-Person",
             "instructor": "Anastasia Kuzminykh",
             "instructor_two": null,
-            "notes": null
+             "semester": "S",
+             "notes": null
         },
         {
             "course": "INF2169H",
@@ -1161,13 +1162,13 @@ export const COURSES = [
             "required_course_1": "UXD",
             "required_course_2": null,
             "required_course_3": null,
-            "day_1": "Tuesday_1 ",
-            "start_time_1": "5:15pm",
-            "end_time_1": "6:15pm",
+            "day": "Tuesday ",
+            "time": "5:15-6:15pm",
             "method": "In-Person",
             "instructor": "Anastasia Kuzminykh",
             "instructor_two": null,
-            "notes": null
+             "semester": "S",
+             "notes": null
         },
         {
             "course": "INF2169H",
@@ -1179,13 +1180,13 @@ export const COURSES = [
             "required_course_1": "UXD",
             "required_course_2": null,
             "required_course_3": null,
-            "day_1": "Wednesday",
-            "start_time_1": "4:00pm",
-            "end_time_1": "5:00pm",
+            "day": "Wednesday",
+            "time": "4-5pm",
             "method": "In-Person",
             "instructor": "Anastasia Kuzminykh",
             "instructor_two": null,
-            "notes": null
+             "semester": "S",
+             "notes": null
         },
         {
             "course": "INF2169H",
@@ -1197,13 +1198,13 @@ export const COURSES = [
             "required_course_1": "UXD",
             "required_course_2": null,
             "required_course_3": null,
-            "day_1": "Wednesday",
-            "start_time_1": "5:15pm",
-            "end_time_1": "6:15pm",
+            "day": "Wednesday",
+            "time": "5:15-6:15pm",
             "method": "In-Person",
             "instructor": "Anastasia Kuzminykh",
             "instructor_two": null,
-            "notes": null
+             "semester": "S",
+             "notes": null
         },
         {
             "course": "INF2171H",
@@ -1215,13 +1216,13 @@ export const COURSES = [
             "required_course_1": null,
             "required_course_2": null,
             "required_course_3": null,
-            "day_1": "Thursday",
-            "start_time_1": "1:00pm",
-            "end_time_1": "4:00pm",
+            "day": "Thursday",
+            "time": "1-4pm",
             "method": "In-Person",
             "instructor": "TBD",
             "instructor_two": null,
-            "notes": null
+             "semester": "S",
+             "notes": null
         },
         {
             "course": "INF2171H",
@@ -1233,13 +1234,13 @@ export const COURSES = [
             "required_course_1": null,
             "required_course_2": null,
             "required_course_3": null,
-            "day_1": "Thursday",
-            "start_time_1": "6:30pm",
-            "end_time_1": "9:30pm",
+            "day": "Thursday",
+            "time": "6:30-9:30pm",
             "method": "In-Person",
             "instructor": "TBD",
             "instructor_two": null,
-            "notes": null
+             "semester": "S",
+             "notes": null
         },
         {
             "course": "INF2172H",
@@ -1251,13 +1252,13 @@ export const COURSES = [
             "required_course_1": null,
             "required_course_2": null,
             "required_course_3": null,
-            "day_1": "Friday",
-            "start_time_1": "9:00am",
-            "end_time_1": "12:00pm",
+            "day": "Friday",
+            "time": "9-12pm",
             "method": "In-Person",
             "instructor": "TBD",
             "instructor_two": null,
-            "notes": null
+             "semester": "S",
+             "notes": null
         },
         {
             "course": "INF2173H",
@@ -1269,13 +1270,13 @@ export const COURSES = [
             "required_course_1": null,
             "required_course_2": null,
             "required_course_3": null,
-            "day_1": "Friday",
-            "start_time_1": "1:00pm",
-            "end_time_1": "4:00pm",
+            "day": "Friday",
+            "time": "1-4pm",
             "method": "In-Person",
             "instructor": "TBD",
             "instructor_two": null,
-            "notes": "2nd+ year MI students only"
+             "semester": "S",
+             "notes": "2nd+ year MI students only"
         },
         {
             "course": "INF2175H",
@@ -1287,13 +1288,13 @@ export const COURSES = [
             "required_course_1": "ARM",
             "required_course_2": "KMIM",
             "required_course_3": null,
-            "day_1": "Tuesday_1 ",
-            "start_time_1": "6:30pm",
-            "end_time_1": "9:30pm",
+            "day": "Tuesday ",
+            "time": "6:30-9:30pm",
             "method": "In-Person",
             "instructor": "TBD",
             "instructor_two": null,
-            "notes": null
+             "semester": "S",
+             "notes": null
         },
         {
             "course": "INF2177H ",
@@ -1305,13 +1306,13 @@ export const COURSES = [
             "required_course_1": "ISD",
             "required_course_2": null,
             "required_course_3": null,
-            "day_1": "Monday",
-            "start_time_1": "9:00am",
-            "end_time_1": "12:00pm",
+            "day": "Monday",
+            "time": "9-12pm",
             "method": "In-Person",
             "instructor": "Safwat Hassan",
             "instructor_two": null,
-            "notes": "recommended to be taken in 2nd year"
+             "semester": "S",
+             "notes": "recommended to be taken in 2nd year"
         },
         {
             "course": "INF2178H",
@@ -1323,13 +1324,13 @@ export const COURSES = [
             "required_course_1": "HCDS",
             "required_course_2": null,
             "required_course_3": null,
-            "day_1": "Monday",
-            "start_time_1": "1:00pm",
-            "end_time_1": "4:00pm",
+            "day": "Monday",
+            "time": "1-4pm",
             "method": "In-Person",
             "instructor": "Shion Guha",
             "instructor_two": null,
-            "notes": null
+             "semester": "S",
+             "notes": null
         },
         {
             "course": "INF2181H",
@@ -1341,13 +1342,13 @@ export const COURSES = [
             "required_course_1": "CIPS",
             "required_course_2": null,
             "required_course_3": null,
-            "day_1": "Tuesday_1 ",
-            "start_time_1": "9:00am",
-            "end_time_1": "12:00pm",
+            "day": "Tuesday ",
+            "time": "9-12pm",
             "method": "In-Person",
             "instructor": "Victoria Owen",
             "instructor_two": null,
-            "notes": null
+             "semester": "S",
+             "notes": null
         },
         {
             "course": "INF2184H",
@@ -1359,13 +1360,13 @@ export const COURSES = [
             "required_course_1": "ARM",
             "required_course_2": null,
             "required_course_3": null,
-            "day_1": "Tuesday_1 ",
-            "start_time_1": "4:00pm",
-            "end_time_1": "6:00pm",
+            "day": "Tuesday ",
+            "time": "4-6pm",
             "method": "In-Person",
             "instructor": "Fiorella Foscarini",
             "instructor_two": null,
-            "notes": null
+             "semester": "S",
+             "notes": null
         },
         {
             "course": "INF2184H",
@@ -1377,13 +1378,13 @@ export const COURSES = [
             "required_course_1": "ARM",
             "required_course_2": null,
             "required_course_3": null,
-            "day_1": "Wednesday",
-            "start_time_1": "1:00pm",
-            "end_time_1": "3:00pm",
+            "day": "Wednesday",
+            "time": "1-3pm",
             "method": "In-Person",
             "instructor": "Fiorella Foscarini",
             "instructor_two": null,
-            "notes": null
+             "semester": "S",
+             "notes": null
         },
         {
             "course": "INF2185H",
@@ -1395,13 +1396,13 @@ export const COURSES = [
             "required_course_1": null,
             "required_course_2": null,
             "required_course_3": null,
-            "day_1": "Tuesday_1 ",
-            "start_time_1": "1:00pm",
-            "end_time_1": "4:00pm",
+            "day": "Tuesday ",
+            "time": "1-4pm",
             "method": "In-Person",
             "instructor": "Heather MacNeil",
             "instructor_two": null,
-            "notes": null
+             "semester": "S",
+             "notes": null
         },
         {
             "course": "INF2186H",
@@ -1413,13 +1414,13 @@ export const COURSES = [
             "required_course_1": "ARM",
             "required_course_2": null,
             "required_course_3": null,
-            "day_1": "Thursday",
-            "start_time_1": "6:30pm",
-            "end_time_1": "8:30pm",
+            "day": "Thursday",
+            "time": "6:30-8:30pm",
             "method": "In-Person",
             "instructor": "TBD",
             "instructor_two": null,
-            "notes": null
+             "semester": "S",
+             "notes": null
         },
         {
             "course": "INF2186H",
@@ -1431,13 +1432,13 @@ export const COURSES = [
             "required_course_1": "ARM",
             "required_course_2": null,
             "required_course_3": null,
-            "day_1": "Friday",
-            "start_time_1": "6:30pm",
-            "end_time_1": "8:30pm",
+            "day": "Friday",
+            "time": "6:30-8:30pm",
             "method": "In-Person",
             "instructor": "TBD",
             "instructor_two": null,
-            "notes": null
+             "semester": "S",
+             "notes": null
         },
         {
             "course": "INF2191H",
@@ -1449,13 +1450,13 @@ export const COURSES = [
             "required_course_1": "UXD",
             "required_course_2": null,
             "required_course_3": null,
-            "day_1": "Wednesday",
-            "start_time_1": "9:00am",
-            "end_time_1": "12:00pm",
+            "day": "Wednesday",
+            "time": "9-12pm",
             "method": "In-Person",
             "instructor": "Velian Pandeliev",
             "instructor_two": null,
-            "notes": null
+             "semester": "S",
+             "notes": null
         },
         {
             "course": "INF2191H",
@@ -1467,13 +1468,13 @@ export const COURSES = [
             "required_course_1": "UXD",
             "required_course_2": null,
             "required_course_3": null,
-            "day_1": "Wednesday",
-            "start_time_1": "6:30pm",
-            "end_time_1": "9:30pm",
+            "day": "Wednesday",
+            "time": "6:30-9:30pm",
             "method": "In-Person",
             "instructor": "Velian Pandeliev",
             "instructor_two": null,
-            "notes": null
+             "semester": "S",
+             "notes": null
         },
         {
             "course": "INF2191H",
@@ -1485,13 +1486,13 @@ export const COURSES = [
             "required_course_1": "UXD",
             "required_course_2": null,
             "required_course_3": null,
-            "day_1": "Friday",
-            "start_time_1": "9:00am",
-            "end_time_1": "12:00pm",
+            "day": "Friday",
+            "time": "9-12pm",
             "method": "In-Person",
             "instructor": "Velian Pandeliev",
             "instructor_two": null,
-            "notes": null
+             "semester": "S",
+             "notes": null
         },
         {
             "course": "INF2192H",
@@ -1503,13 +1504,13 @@ export const COURSES = [
             "required_course_1": "UXD",
             "required_course_2": null,
             "required_course_3": null,
-            "day_1": "Tuesday_1 ",
-            "start_time_1": "9:00am",
-            "end_time_1": "12:00pm",
+            "day": "Tuesday ",
+            "time": "9-12pm",
             "method": "In-Person",
             "instructor": "Priyank Chandra",
             "instructor_two": null,
-            "notes": "2nd year MI students only"
+             "semester": "S",
+             "notes": "2nd year MI students only"
         },
         {
             "course": "INF2192H",
@@ -1521,13 +1522,13 @@ export const COURSES = [
             "required_course_1": "UXD",
             "required_course_2": null,
             "required_course_3": null,
-            "day_1": "Tuesday_1 ",
-            "start_time_1": "6:30pm",
-            "end_time_1": "9:30pm",
+            "day": "Tuesday ",
+            "time": "6:30-9:30pm",
             "method": "In-Person",
             "instructor": "Priyank Chandra",
             "instructor_two": null,
-            "notes": "2nd year MI students only"
+             "semester": "S",
+             "notes": "2nd year MI students only"
         },
         {
             "course": "INF2200H",
@@ -1539,13 +1540,13 @@ export const COURSES = [
             "required_course_1": null,
             "required_course_2": null,
             "required_course_3": null,
-            "day_1": "Monday",
-            "start_time_1": "6:30pm",
-            "end_time_1": "9:30pm",
+            "day": "Monday",
+            "time": "6:30-9:30pm",
             "method": "In-Person",
             "instructor": "TBD",
             "instructor_two": "TBD",
-            "notes": null
+             "semester": "S",
+             "notes": null
         },
         {
             "course": "INF2202H",
@@ -1557,13 +1558,13 @@ export const COURSES = [
             "required_course_1": null,
             "required_course_2": null,
             "required_course_3": null,
-            "day_1": "Monday",
-            "start_time_1": "9:00am",
-            "end_time_1": "12:00pm",
+            "day": "Monday",
+            "time": "9-12pm",
             "method": "In-Person",
             "instructor": "TBD",
             "instructor_two": null,
-            "notes": null
+             "semester": "S",
+             "notes": null
         },
         {
             "course": "INF2205H",
@@ -1575,13 +1576,13 @@ export const COURSES = [
             "required_course_1": null,
             "required_course_2": null,
             "required_course_3": null,
-            "day_1": "Friday",
-            "start_time_1": "6:30pm",
-            "end_time_1": "9:30pm",
+            "day": "Friday",
+            "time": "6:30-9:30pm",
             "method": "In-Person",
             "instructor": "TBD",
             "instructor_two": null,
-            "notes": null
+             "semester": "S",
+             "notes": null
         },
         {
             "course": "INF2210H",
@@ -1593,13 +1594,13 @@ export const COURSES = [
             "required_course_1": "HCDS",
             "required_course_2": null,
             "required_course_3": null,
-            "day_1": "Tuesday_1 ",
-            "start_time_1": "1:00pm",
-            "end_time_1": "4:00pm",
+            "day": "Tuesday ",
+            "time": "1-4pm",
             "method": "In-Person",
             "instructor": "Tegan Maharaj",
             "instructor_two": null,
-            "notes": "2nd year MI students only"
+             "semester": "S",
+             "notes": "2nd year MI students only"
         },
         {
             "course": "INF2210H",
@@ -1611,13 +1612,13 @@ export const COURSES = [
             "required_course_1": "HCDS",
             "required_course_2": null,
             "required_course_3": null,
-            "day_1": "Wednesday",
-            "start_time_1": "9:00am",
-            "end_time_1": "12:00pm",
+            "day": "Wednesday",
+            "time": "9-12pm",
             "method": "In-Person",
             "instructor": "Seamus Ross",
             "instructor_two": null,
-            "notes": "2nd year MI students only"
+             "semester": "S",
+             "notes": "2nd year MI students only"
         },
         {
             "course": "INF2224H",
@@ -1629,13 +1630,13 @@ export const COURSES = [
             "required_course_1": null,
             "required_course_2": null,
             "required_course_3": null,
-            "day_1": "Tuesday_1 ",
-            "start_time_1": "1:00pm",
-            "end_time_1": "4:00pm",
+            "day": "Tuesday ",
+            "time": "1-4pm",
             "method": "In-Person",
             "instructor": "TBD",
             "instructor_two": null,
-            "notes": null
+             "semester": "S",
+             "notes": null
         },
         {
             "course": "INF2225H",
@@ -1647,13 +1648,13 @@ export const COURSES = [
             "required_course_1": null,
             "required_course_2": null,
             "required_course_3": null,
-            "day_1": "Friday",
-            "start_time_1": "1:00pm",
-            "end_time_1": "4:00pm",
+            "day": "Friday",
+            "time": "1-4pm",
             "method": "In-Person",
             "instructor": "Patrick Keilty",
             "instructor_two": null,
-            "notes": null
+             "semester": "S",
+             "notes": null
         },
         {
             "course": "INF2234H",
@@ -1665,13 +1666,13 @@ export const COURSES = [
             "required_course_1": null,
             "required_course_2": null,
             "required_course_3": null,
-            "day_1": "Wednesday",
-            "start_time_1": "6:30pm",
-            "end_time_1": "9:30pm",
+            "day": "Wednesday",
+            "time": "6:30-9:30pm",
             "method": "In-Person",
             "instructor": "TBD",
             "instructor_two": null,
-            "notes": null
+             "semester": "S",
+             "notes": null
         },
         {
             "course": "INF2235H",
@@ -1683,13 +1684,13 @@ export const COURSES = [
             "required_course_1": null,
             "required_course_2": null,
             "required_course_3": null,
-            "day_1": "Wednesday",
-            "start_time_1": "6:30pm",
-            "end_time_1": "9:30pm",
+            "day": "Wednesday",
+            "time": "6:30-9:30pm",
             "method": "In-Person",
             "instructor": "Marie Pier Boucher",
             "instructor_two": null,
-            "notes": null
+             "semester": "S",
+             "notes": null
         },
         {
             "course": "INF2239H",
@@ -1701,13 +1702,13 @@ export const COURSES = [
             "required_course_1": null,
             "required_course_2": null,
             "required_course_3": null,
-            "day_1": "Wednesday",
-            "start_time_1": "1:00pm",
-            "end_time_1": "4:00pm",
+            "day": "Wednesday",
+            "time": "1-4pm",
             "method": "In-Person",
             "instructor": "Colin Furness",
             "instructor_two": null,
-            "notes": null
+             "semester": "S",
+             "notes": null
         },
         {
             "course": "INF2242H",
@@ -1719,13 +1720,13 @@ export const COURSES = [
             "required_course_1": "CIPS",
             "required_course_2": null,
             "required_course_3": null,
-            "day_1": "Friday",
-            "start_time_1": "1:00pm",
-            "end_time_1": "4:00pm",
+            "day": "Friday",
+            "time": "1-4pm",
             "method": "In-Person",
             "instructor": "Negin Dahya",
             "instructor_two": null,
-            "notes": null
+             "semester": "S",
+             "notes": null
         },
         {
             "course": "INF2243H",
@@ -1737,13 +1738,13 @@ export const COURSES = [
             "required_course_1": "CIPS",
             "required_course_2": "C&T",
             "required_course_3": null,
-            "day_1": "Monday",
-            "start_time_1": "1:00pm",
-            "end_time_1": "4:00pm",
+            "day": "Monday",
+            "time": "1-4pm",
             "method": "In-Person",
             "instructor": "Alan Galey",
             "instructor_two": null,
-            "notes": null
+             "semester": "S",
+             "notes": null
         },
         {
             "course": "INF2245H",
@@ -1755,13 +1756,13 @@ export const COURSES = [
             "required_course_1": null,
             "required_course_2": null,
             "required_course_3": null,
-            "day_1": "Thursday",
-            "start_time_1": "6:30pm",
-            "end_time_1": "9:30pm",
+            "day": "Thursday",
+            "time": "6:30-9:30pm",
             "method": "In-Person",
             "instructor": "Julie Chen",
             "instructor_two": null,
-            "notes": null
+             "semester": "S",
+             "notes": null
         },
         {
             "course": "INF2250H",
@@ -1773,13 +1774,13 @@ export const COURSES = [
             "required_course_1": null,
             "required_course_2": null,
             "required_course_3": null,
-            "day_1": "Wednesday",
-            "start_time_1": "9:00am",
-            "end_time_1": "12:00pm",
+            "day": "Wednesday",
+            "time": "9-12pm",
             "method": "In-Person",
             "instructor": "TBD",
             "instructor_two": null,
-            "notes": null
+             "semester": "S",
+             "notes": null
         },
         {
             "course": "INF2256H",
@@ -1791,13 +1792,13 @@ export const COURSES = [
             "required_course_1": null,
             "required_course_2": null,
             "required_course_3": null,
-            "day_1": "Tuesday_1 ",
-            "start_time_1": "6:30pm",
-            "end_time_1": "9:30pm",
+            "day": "Tuesday ",
+            "time": "6:30-9:30pm",
             "method": "In-Person",
             "instructor": "Christopher Young",
             "instructor_two": null,
-            "notes": null
+             "semester": "S",
+             "notes": null
         },
         {
             "course": "INF2311H",
@@ -1809,13 +1810,13 @@ export const COURSES = [
             "required_course_1": null,
             "required_course_2": null,
             "required_course_3": null,
-            "day_1": "Tuesday_1 ",
-            "start_time_1": "6:30pm",
-            "end_time_1": "9:30pm",
+            "day": "Tuesday ",
+            "time": "6:30-9:30pm",
             "method": "In-Person",
             "instructor": "Rachel Beattie",
             "instructor_two": null,
-            "notes": null
+             "semester": "S",
+             "notes": null
         },
         {
             "course": "INF2313H",
@@ -1827,13 +1828,13 @@ export const COURSES = [
             "required_course_1": null,
             "required_course_2": null,
             "required_course_3": null,
-            "day_1": "Wednesday",
-            "start_time_1": "1:00pm",
-            "end_time_1": "4:00pm",
+            "day": "Wednesday",
+            "time": "1-4pm",
             "method": "In-Person",
             "instructor": "Kelly Lyons",
             "instructor_two": null,
-            "notes": null
+             "semester": "S",
+             "notes": null
         },
         {
             "course": "INF2320H",
@@ -1845,13 +1846,13 @@ export const COURSES = [
             "required_course_1": "C&T",
             "required_course_2": null,
             "required_course_3": null,
-            "day_1": "Thursday",
-            "start_time_1": "9:00am",
-            "end_time_1": "12:00pm",
+            "day": "Thursday",
+            "time": "9-12pm",
             "method": "In-Person",
             "instructor": "Sara Grimes",
             "instructor_two": null,
-            "notes": null
+             "semester": "S",
+             "notes": null
         },
         {
             "course": "INF2330H",
@@ -1863,13 +1864,13 @@ export const COURSES = [
             "required_course_1": null,
             "required_course_2": null,
             "required_course_3": null,
-            "day_1": "Friday",
-            "start_time_1": "9:00am",
-            "end_time_1": "12:00pm",
+            "day": "Friday",
+            "time": "9-12pm",
             "method": "In-Person",
             "instructor": "Jenna Hartel",
             "instructor_two": null,
-            "notes": null
+             "semester": "S",
+             "notes": null
         },
         {
             "course": "INF2331H",
@@ -1881,13 +1882,13 @@ export const COURSES = [
             "required_course_1": "C&T",
             "required_course_2": null,
             "required_course_3": null,
-            "day_1": "Wednesday",
-            "start_time_1": "1:00pm",
-            "end_time_1": "4:00pm",
+            "day": "Wednesday",
+            "time": "1-4pm",
             "method": "In-Person",
             "instructor": "Alan Galey",
             "instructor_two": null,
-            "notes": null
+             "semester": "S",
+             "notes": null
         },
         {
             "course": "INF2403H",
@@ -1899,13 +1900,13 @@ export const COURSES = [
             "required_course_1": null,
             "required_course_2": null,
             "required_course_3": null,
-            "day_1": "Thursday",
-            "start_time_1": "9:00am",
-            "end_time_1": "12:00pm",
+            "day": "Thursday",
+            "time": "9-12pm",
             "method": "In-Person",
             "instructor": "TBD",
             "instructor_two": null,
-            "notes": "2nd year MI students only"
+             "semester": "S",
+             "notes": "2nd year MI students only"
         },
         {
             "course": "INF2406H",
@@ -1917,13 +1918,13 @@ export const COURSES = [
             "required_course_1": null,
             "required_course_2": null,
             "required_course_3": null,
-            "day_1": "Monday",
-            "start_time_1": "10:00am",
-            "end_time_1": "12:00pm",
+            "day": "Monday",
+            "time": "10-12pm",
             "method": "In-Person",
             "instructor": "Aviv Shachak",
             "instructor_two": null,
-            "notes": null
+             "semester": "S",
+             "notes": null
         },
         {
             "course": "INF3010H",
@@ -1935,13 +1936,13 @@ export const COURSES = [
             "required_course_1": null,
             "required_course_2": null,
             "required_course_3": null,
-            "day_1": "Tuesday_1 ",
-            "start_time_1": "9:00am",
-            "end_time_1": "12:00pm",
+            "day": "Tuesday ",
+            "time": "9-12pm",
             "method": "In-Person",
             "instructor": "TBD",
             "instructor_two": null,
-            "notes": "PhD students only"
+             "semester": "S",
+             "notes": "PhD students only"
         },
         {
             "course": "INF3012H",
@@ -1953,13 +1954,13 @@ export const COURSES = [
             "required_course_1": null,
             "required_course_2": null,
             "required_course_3": null,
-            "day_1": "Thursday",
-            "start_time_1": "1:00pm",
-            "end_time_1": "4:00pm",
+            "day": "Thursday",
+            "time": "1-4pm",
             "method": "In-Person",
             "instructor": "Jeff Boase",
             "instructor_two": null,
-            "notes": "PhD students only"
+             "semester": "S",
+             "notes": "PhD students only"
         },
         {
             "course": "INF3XXXH",
@@ -1971,13 +1972,13 @@ export const COURSES = [
             "required_course_1": null,
             "required_course_2": null,
             "required_course_3": null,
-            "day_1": "Monday",
-            "start_time_1": "1:00pm",
-            "end_time_1": "4:00pm",
+            "day": "Monday",
+            "time": "1-4pm",
             "method": "In-Person",
             "instructor": "Rohan Alexander",
             "instructor_two": null,
-            "notes": "PhD students only, course is in development and is research methods related to stats, needs approval"
+             "semester": "S",
+             "notes": "PhD students only, course is in development and is research methods related to stats, needs approval"
         },
         {
             "course": "KMD1002H",
@@ -1989,13 +1990,13 @@ export const COURSES = [
             "required_course_1": "KMD collaborative specialization",
             "required_course_2": null,
             "required_course_3": null,
-            "day_1": "Tuesday_1 ",
-            "start_time_1": "4:00pm",
-            "end_time_1": "6:00pm",
+            "day": "Tuesday ",
+            "time": "4-6pm",
             "method": "In-Person",
             "instructor": "TBD",
             "instructor_two": null,
-            "notes": "KMD CS students have priority"
+             "semester": "S",
+             "notes": "KMD CS students have priority"
         },
         {
             "course": "MSL1150H",
@@ -2007,13 +2008,13 @@ export const COURSES = [
             "required_course_1": "MMSt",
             "required_course_2": null,
             "required_course_3": null,
-            "day_1": "Tuesday_1 ",
-            "start_time_1": "9:00am",
-            "end_time_1": "12:00pm",
+            "day": "Tuesday ",
+            "time": "9-12pm",
             "method": "In-Person",
             "instructor": "Costis Dallas",
             "instructor_two": "Cara Krmpotich",
-            "notes": null
+             "semester": "S",
+             "notes": null
         },
         {
             "course": "MSL1150H",
@@ -2025,13 +2026,13 @@ export const COURSES = [
             "required_course_1": "MMSt",
             "required_course_2": null,
             "required_course_3": null,
-            "day_1": "Tuesday_1 ",
-            "start_time_1": "9:00am",
-            "end_time_1": "12:00pm",
+            "day": "Tuesday ",
+            "time": "9-12pm",
             "method": "In-Person",
             "instructor": "Costis Dallas",
             "instructor_two": "Cara Krmpotich",
-            "notes": null
+             "semester": "S",
+             "notes": null
         },
         {
             "course": "MSL1230H",
@@ -2043,13 +2044,13 @@ export const COURSES = [
             "required_course_1": "MMSt",
             "required_course_2": null,
             "required_course_3": null,
-            "day_1": "Wednesday",
-            "start_time_1": "9:00am",
-            "end_time_1": "12:00pm",
+            "day": "Wednesday",
+            "time": "9-12pm",
             "method": "In-Person",
             "instructor": "Costis Dallas",
             "instructor_two": null,
-            "notes": null
+             "semester": "S",
+             "notes": null
         },
         {
             "course": "MSL1350H",
@@ -2061,13 +2062,13 @@ export const COURSES = [
             "required_course_1": null,
             "required_course_2": null,
             "required_course_3": null,
-            "day_1": "Monday",
-            "start_time_1": "9:00am",
-            "end_time_1": "12:00pm",
+            "day": "Monday",
+            "time": "9-12pm",
             "method": "In-Person",
             "instructor": "TBD",
             "instructor_two": null,
-            "notes": null
+             "semester": "S",
+             "notes": null
         },
         {
             "course": "MSL2050H",
@@ -2079,13 +2080,13 @@ export const COURSES = [
             "required_course_1": null,
             "required_course_2": null,
             "required_course_3": null,
-            "day_1": "Thursday_1s",
-            "start_time_1": "1:00pm",
-            "end_time_1": "4:00pm",
+            "day": "Thursdays",
+            "time": "1-4pm",
             "method": "In-Person",
             "instructor": "TBD",
             "instructor_two": null,
-            "notes": null
+             "semester": "S",
+             "notes": null
         },
         {
             "course": "MSL2100H",
@@ -2097,13 +2098,13 @@ export const COURSES = [
             "required_course_1": null,
             "required_course_2": null,
             "required_course_3": null,
-            "day_1": "Friday",
-            "start_time_1": "9:00am",
-            "end_time_1": "5:00pm",
+            "day": "Friday",
+            "time": "9-5pm",
             "method": "In-Person",
             "instructor": "TBD",
             "instructor_two": null,
-            "notes": "intensive, 6 weeks, 9-5pm on Friday_1s"
+             "semester": "S",
+             "notes": "intensive, 6 weeks, 9-5pm on Fridays"
         },
         {
             "course": "MSL2230H",
@@ -2115,13 +2116,13 @@ export const COURSES = [
             "required_course_1": null,
             "required_course_2": null,
             "required_course_3": null,
-            "day_1": "Thursday",
-            "start_time_1": "6:30pm",
-            "end_time_1": "9:30pm",
+            "day": "Thursday",
+            "time": "6:30-9:30pm",
             "method": "In-Person",
             "instructor": "TBD",
             "instructor_two": null,
-            "notes": null
+             "semester": "S",
+             "notes": null
         },
         {
             "course": "MSL2326H",
@@ -2133,13 +2134,13 @@ export const COURSES = [
             "required_course_1": null,
             "required_course_2": null,
             "required_course_3": null,
-            "day_1": "Monday",
-            "start_time_1": "6:30pm",
-            "end_time_1": "9:30pm",
+            "day": "Monday",
+            "time": "6:30-9:30pm",
             "method": "In-Person",
             "instructor": "TBD",
             "instructor_two": null,
-            "notes": null
+             "semester": "S",
+             "notes": null
         },
         {
             "course": "MSL2335H",
@@ -2151,13 +2152,13 @@ export const COURSES = [
             "required_course_1": null,
             "required_course_2": null,
             "required_course_3": null,
-            "day_1": "Monday",
-            "start_time_1": "1:00pm",
-            "end_time_1": "4:00pm",
+            "day": "Monday",
+            "time": "1-4pm",
             "method": "In-Person",
             "instructor": "TBD",
             "instructor_two": null,
-            "notes": null
+             "semester": "S",
+             "notes": null
         },
         {
             "course": "MSL2340H",
@@ -2169,13 +2170,13 @@ export const COURSES = [
             "required_course_1": null,
             "required_course_2": null,
             "required_course_3": null,
-            "day_1": "Wednesday",
-            "start_time_1": "1:00pm",
-            "end_time_1": "4:00pm",
+            "day": "Wednesday",
+            "time": "1-4pm",
             "method": "In-Person",
             "instructor": "Alan Stanbridge",
             "instructor_two": null,
-            "notes": null
+             "semester": "S",
+             "notes": null
         },
         {
             "course": "MSL4000Y",
@@ -2187,12 +2188,12 @@ export const COURSES = [
             "required_course_1": "MMSt",
             "required_course_2": null,
             "required_course_3": null,
-            "day_1": "Thursday",
-            "start_time_1": "9:00am",
-            "end_time_1": "12:00pm",
+            "day": "Thursday",
+            "time": "9-12pm",
             "method": "In-Person",
             "instructor": "Cara Krmpotich",
             "instructor_two": "Morgan Mavis",
-            "notes": "2nd+ year MMSt students only"
+             "semester": "S",
+             "notes": "2nd+ year MMSt students only"
         }
 ]

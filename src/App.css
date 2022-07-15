@@ -59,6 +59,36 @@
   flex-direction: column;
 }
 
+.class-info {
+  margin: 0 20px;
+  margin-left: 28px;
+}
+
+hr {
+  margin: 16px 20px 8px;
+  height: 1px;
+    background-color: #ccc;
+    border: none;
+}
+
+.class-info span {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.class-info h1 {
+  margin: 0px 0px;
+  font-weight: 400;
+  font-size: 24px;
+  margin-top: 0;
+}
+.class-info p {
+  line-height: 150%;
+  color: #333027;
+  margin-top: 4px;
+}
+
 .group-set {
   padding: 0 20px;
   padding-top: 0;
