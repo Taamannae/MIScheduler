@@ -1270,7 +1270,7 @@ export const COURSES = [
   "required_course_2": null,
   "required_course_3": null,
   "day_1": "Monday",
-  "start_time_1": "9:00pm",
+  "start_time_1": "9:00am",
   "end_time_1": "12:00pm",
   "day_2 ": null,
   "start_time_2": null,

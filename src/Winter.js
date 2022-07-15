@@ -377,6 +377,7 @@ export default class Winter extends React.Component {
 
 
   handleEvent = (e) => {
+    console.log('clicl', e);
     let classId = e.event.id;
     let code = classId.split(':')[0];
     this.setState({
