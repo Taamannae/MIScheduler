@@ -54,7 +54,7 @@ export default class Winter extends React.Component {
   }
 
 
-  handleOnSearch = (string, results) => {
+  handleOnSearch = () => {
     // onSearch will have as the first callback parameter
     // the string searched and for the second the results.
     this.setState({
@@ -161,12 +161,14 @@ export default class Winter extends React.Component {
       realday2 = realday2.format("YYYY-MM-DD");
       times = [{
         id: time.course + ':' + time.sessionType,
+        key: time.course + ':' + time.sessionType,
         title: `${time.course}: ${time.sessionType} ${time.section} - ${time.method}`,
         color: this.state.color,
         start: `${realday2}T${this.convertTime2023(time.start_time_2)}`,
         end: `${realday2}T${this.convertTime2023(time.end_time_2)}`,
       }, {
         id: time.course + ':' + time.sessionType,
+        key: time.course + ':' + time.sessionType + 1,
         title: `${time.course}: ${time.sessionType} ${time.section} - ${time.method}`,
         color: this.state.color,
         start: `${realday}T${this.convertTime2023(startTime)}`,
@@ -225,7 +227,7 @@ export default class Winter extends React.Component {
   renderTile = (type, x, className) => {
 
     return (
-      <div className={type + " class-tile " + className} onClick={() => this.addTime(x)}>
+      <div className={type + " class-tile " + className} onClick={() => this.addTime(x)} key={x.course + type}>
         <div className="time-title">
           <h3>{x.day_1} <br />{x.start_time_1}-{x.end_time_1}<br />{x.start_time_2} {x.end_time_2}</h3>
           <h4>{x.sessionType} {x.section} <br /> {x.method}</h4>
@@ -265,15 +267,11 @@ export default class Winter extends React.Component {
 
             {buttons}</h3>
           {lec.map(x => {
-            console.log(this.state.schedule);
             let className = ''
             let find = _.find(this.state.schedule, function (o) {
-              console.log('ppppppppppp', o);
-              console.log('dsjcdsdcs', x.course + ':' + x.sessionType && o.title === `${x.course}: ${x.sessionType} ${x.section} - ${x.method}`);
               return (o.id === x.course + ':' + x.sessionType && o.title === `${x.course}: ${x.sessionType} ${x.section} - ${x.method}`)
             });
 
-            console.log(find);
             if (find) {
               className = 'selected-item'
             }
@@ -369,7 +367,7 @@ export default class Winter extends React.Component {
           <img src="/reading.svg" alt="" />
           <h2 style={{ marginTop: 12 }}>Build a</h2>
           <h2 style={{ fontWeight: 400, marginBottom: 12 }}>Winter Schedule</h2>
-          <p> Use this tool to build your UofT Masters of Information course schedule for Winter 2023. You can build a winter schedule above. <br /> <br /> Search for a course above with the course code or title. Then select lectures, practicums and tutorials.
+          <p> Use this tool to build your UofT Masters of Information course schedule for Winter 2023. You can build a Fall schedule above. <br /> <br /> Search for a course above with the course code or title. Then select lectures, practicums and tutorials.
             Once you add a class you can come back and delete it or edit it by searching for the class or clicking on the event in the calendar
           </p>
         </div>
@@ -391,6 +389,8 @@ export default class Winter extends React.Component {
   }
 
   formatResult = (item) => {
+    // return item;
+    console.log(item);
     return (
       <div id={item.id} key={item.key}>{item.name}</div>
     )
@@ -410,7 +410,7 @@ export default class Winter extends React.Component {
               <div style={{ width: '100%' }}>
                 <ReactSearchAutocomplete
                   items={items}
-                  placeholder="Search for a winter 2023 class"
+                  placeholder="Search for a Winter 2023 class"
                   onSearch={this.handleOnSearch}
                   onHover={this.handleOnHover}
                   onSelect={this.handleOnSelect}

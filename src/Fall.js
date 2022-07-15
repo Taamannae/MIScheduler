@@ -195,6 +195,8 @@ export default class Fall extends React.Component {
       end: `${realday}T${this.convertTime2023(endTime)}`,
     }
 
+  
+
     this.setState({
       schedule: newSched.concat(times)
     })
@@ -397,6 +399,7 @@ export default class Fall extends React.Component {
     // return (<p dangerouslySetInnerHTML={{__html: '<strong>'+item+'</strong>'}}></p>); //To format result as html
   }
   render() {
+    console.log('render',this.state.schedule);
   return (
     <div className="App">
       <div className="App-header">
