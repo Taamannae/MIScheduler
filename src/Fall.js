@@ -145,7 +145,10 @@ export default class Fall extends React.Component {
 
     });
     if (time.course === "INF1602H" && time.sessionType === 'LEC') {
-      let realday2 = sunday.add(DAYS[time.day_2], "days")
+      let today2 = moment();
+      let todayDay2 = today2.day();
+      let sunday2 = today2.subtract(todayDay2, "days");
+      let realday2 = sunday2.add(4, "days")
       realday2 = realday2.format("YYYY-MM-DD");
 
       let classTime = time.time_2.split('-');
@@ -260,13 +263,8 @@ export default class Fall extends React.Component {
 
             let className = ''
             let find = _.find(this.state.schedule, function (o) {
-
-              console.log(o.id, x.course + ':' + x.sessionType);
-              console.log(o.title, `${x.course}: ${x.sessionType} ${x.section} - ${x.method}`);
               return (o.id === x.course + ':' + x.sessionType && o.title === `${x.course}: ${x.sessionType} ${x.section} - ${x.method} ${x.room}`)
             });
-
-            console.log(find);
             if (find) {
               className = 'selected-item'
             }
@@ -344,9 +342,6 @@ export default class Fall extends React.Component {
             })} </div>)
 
       }
-
-      console.log(this.state.activeCourse.course);
-
     let selfie = this;
     let findTitle = _.find(COURSES, function (o) {
       return (o.course === selfie.state.activeCourse.course && o.sessionType === "LEC")

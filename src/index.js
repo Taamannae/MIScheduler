@@ -21,7 +21,6 @@ let items = document.getElementsByClassName('fc-col-header-cell-cushion');
 for (var item in items) {
   let date = items[item];
   let text = date.innerText;
-  console.log(text);
   if (text && text.includes(' ')) {
     text = text.split(' ')[0];
     date.innerHTML = text
