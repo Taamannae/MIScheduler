@@ -429,7 +429,7 @@ export default class Fall extends React.Component {
           <div className="footer">
             {/* <div>Help</div> */}
             <div className="footer-content">
-              <p>Last Edit: Jul 14</p>
+              <p>Last Edit: Aug 6</p>
               <p>Built by <a href="https://taamannae.dev/" target="_blank" rel="noreferrer">Tammy</a></p>
             </div>
           </div>
